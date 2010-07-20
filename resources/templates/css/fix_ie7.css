@@ -1,0 +1,28 @@
+/************************************************
+
+FILE:		  	ie7.css
+DESCRIPTION:  	File Fixes IE7 Bugs
+
+************************************************/
+
+
+/* @group 1. Generic Fixes */
+	/* @group Generic List Fixes */
+	dl		{float:left;}
+	dt 		{float:left; clear:left;}				
+	dd		{float:none;}
+	
+	ol		{padding-left:0;}
+	ol ol	{padding-left:0;}	
+
+	/* @group end */
+/* @group end */
+
+
+/* @group 2. Navigation */	
+	
+	#nav-main ul li				{position:relative; width:auto;}
+	#nav-main ul li ul 			{position:absolute; top:32px; left:0; width:auto;}
+	#nav-main ul li ul li a		{width:140px; overflow:hidden;}
+	
+/* @end */

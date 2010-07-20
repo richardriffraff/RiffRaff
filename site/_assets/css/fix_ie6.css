@@ -1,0 +1,71 @@
+/************************************************
+
+FILE:		  	ie6.css
+DESCRIPTION:  	File Fixes IE6 Bugs
+
+************************************************/
+
+/* @group 1. Generic Fixes */
+
+	body			{float:left; height:100%;} /* For the Overlay */
+	.clearfix 		{zoom: 1; display: block;}
+	
+	/* @group Generic List Fixes */	
+		dl			{float:left; display:block;}
+		dt			{position:relative; float:left; display:block; clear: both; }
+		dd			{position:relative; float:none; display:block; clear: right; }
+	/* @end */
+	
+/* @end Group 1. */
+
+/* @group 2.  Swap PNG's for GIFS */
+
+	/* Overlay */
+		.overlay			{background-image: none; background:transparent;}
+		.overlay .tl,
+		.overlay .tr,
+		.overlay .bl,
+		.overlay .br 		{background-image: url(../img/overlay-box.gif) ;}
+		
+	/* Messages */
+		div.message li		{background-image: url(../img/messages/ie/bullets-messages.png) ;}
+		
+	/* Forms */
+		form.frm-styled div.top,
+		form.frm-styled div.tr,
+		form.frm-styled div.bottom,
+		form.frm-styled div.br			{background-image: url(../img/bg_content/ie/bg-form.png) ;}
+	
+	
+	
+	
+	
+
+
+	
+	
+
+/* @end */
+
+/* @group 3. Layout*/
+
+div#footer		{display:inline;}
+
+
+	
+	
+/* @end */
+
+/* @group 4. Navigation */
+div#nav-main li	a			{display:inline;  padding:8px 14px 10px 14px;} /* Proprietry Float Model ;-) */
+#nav-main ul li				{position:relative; width:auto;}
+#nav-main ul li ul 			{position:absolute; top:32px; left:0; width:auto;}
+#nav-main ul li ul li a		{width:140px; overflow:hidden;}
+
+#nav-main ul li ul			{display:none;}
+#nav-main ul li.over ul		{display:block;}
+
+ul.nav-horizontal-slide li a	{display:inline;}
+	
+	
+/* @end */

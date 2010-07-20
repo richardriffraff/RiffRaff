@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="css/typography.css" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 7]><link href="css/fix_ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
+	<!--[if lt IE 7]><link href="css/fix_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->	
+	<link href="css/fix_print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<script src='js/jquery.js' type="text/javascript"></script>
+	<script src='js/application.js' type="text/javascript"> </script>
+	<script src='js/templates.js' type="text/javascript"> </script>
+
+	<title>Moko Boilerplate - Messages (Message boxes that expand + contract to fit any space)</title>	
+</head>
+
+<body>	
+
+	<div style="width:1000px; padding:20px;">
+		
+		<h3>Messages</h3>
+		
+		<p style="padding-left:0;">Message box styles that should expand and contract to fill any space up to a maximum of 1200px wide. The <em>.message</em> class sets styling that is generic to all message boxes.  Then <em>.warning-msg, .error-msg</em> and <em>.sucess-msg</em> classes then set styles specific to the type of message it is.</p>
+		
+		<!-- A warning Message -->
+		
+		<div class="message warning-msg">
+			<div class="top">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+			<h6>
+				<img src="img/spacer.gif" class="message-icon" alt=""/>
+				<span>Message Title</span>
+				<a href="#" title="Close this message"><img src="img/spacer.gif" alt="Close This message" class="message-close"/></a>
+			</h6>
+			<div class="msg-content">					
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus a mi. Curabitur nisl odio, laoreet nec, volutpat eget, suscipit faucibus, ante. Nulla facilisi. Integer sed nisl non ipsum egestas gravida.</p>
+				<ul>
+					<li><a href="#" title="">Solution 1</a></li>
+					<li><a href="#" title="">Solution 2</a></li>
+					<li><a href="#" title="">Solution 3</a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+		</div>
+		
+		<!-- An Error Message -->
+		
+		<div class="message error-msg">
+			<div class="top">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+			<h6>
+				<img src="img/spacer.gif" class="message-icon" alt=""/>
+				<span>Message Title</span>
+				<a href="#" title="Close this message"><img src="img/spacer.gif" alt="Close This message" class="message-close"/></a>
+			</h6>
+			<div class="msg-content">					
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus a mi. Curabitur nisl odio, laoreet nec, volutpat eget, suscipit faucibus, ante. Nulla facilisi. Integer sed nisl non ipsum egestas gravida.</p>
+				<ul>
+					<li><a href="#" title="">Solution 1</a></li>
+					<li><a href="#" title="">Solution 2</a></li>
+					<li><a href="#" title="">Solution 3</a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+		</div>
+		
+		<!-- A happy shiny sucess Message -->
+		
+		<div class="message success-msg">
+			<div class="top">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+			<h6>
+				<img src="img/spacer.gif" class="message-icon" alt=""/>
+				<span>Message Title</span>
+				<a href="#" title="Close this message"><img src="img/spacer.gif" alt="Close This message" class="message-close"/></a>
+			</h6>
+			<div class="msg-content">					
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus a mi. Curabitur nisl odio, laoreet nec, volutpat eget, suscipit faucibus, ante. Nulla facilisi. Integer sed nisl non ipsum egestas gravida.</p>
+				<ul>
+					<li><a href="#" title="">Solution 1</a></li>
+					<li><a href="#" title="">Solution 2</a></li>
+					<li><a href="#" title="">Solution 3</a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<img src="img/spacer.gif" alt="" class="right"/>
+			</div>
+		</div>		
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+/************************************************
+
+FILE:		  	print.css
+DESCRIPTION:  	File is used to overide styles for printing
+
+************************************************/
+
+/* @group 1.Hide Unwanted elements */
+	div.one-clm .clm-narrow,
+	div.two-clm-left .clm-narrow,
+	div.two-clm-right .clm-narrow,
+	div.home-page .clm-narrow,
+	div#nav-main,
+	div.clm-narrow,
+	div#footer ul,
+	div#footer ul li,
+	div#footer ul li a,
+	.btn							{display:none;}
+/* @groupend */
+
+/* @group 2.Layout loving */
+	/* Footer */
+		div#footer			{display:block; float:none; width:100%; clear:both;  font-size:85%;}
+
+/* @groupend */
+
+
+/* @group 3.Give the generic elements some print loving */
+	/* Header */
+		a#logo				{float:left; height:90px; border:none;}
+		a#logo img			{border:none;}
+		
+	/* Template */
+		div#template		{clear:both;}
+		
+	/* Generic Content */
+		h1					{font-size:131%;}
+		p					{font-size:93%;}
+		
+/* @groupend */
+
+
+
+		
+/* Now give specific pages some loving */	
+
+
+
+/* @groupend */

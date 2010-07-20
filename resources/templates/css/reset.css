@@ -1,0 +1,99 @@
+/************************************************
+
+FILE:		  	reset.css
+DESCRIPTION:  	File Resets All Browser Styles
+
+************************************************/
+
+/* BIG RED ANGRY TEXT 
+   Used to highlight and discourage the use of depracted markup within the site. */
+
+font, center, div[align], p[align], table[align], font[color] {
+   color : #cd0000;
+   font-weight : bold;
+   background : #eecc11 repeat 0 0;
+   margin : 10px;
+   padding : 10px;
+   border : 2px dashed #cd0000;
+   font-size : 2em;
+}
+
+/* Reset default styles */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	}
+	
+body 			{ line-height: 1; }
+ol, ul 			{ list-style: none; }
+blockquote, q 	{ quotes: none; }
+	
+	/* remember to define focus styles! */
+:focus 			{ outline: 0; }
+
+	/* remember to highlight inserts somehow! */
+ins 			{ text-decoration: none; }	
+del 			{ text-decoration: line-through;}
+
+	/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+	/* Font Defaults (fonts.css)
+
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.4.1
+
+Note: Percents could work for IE, but for backCompat 
+      purposes, we are using keywords. x-small is for 
+      IE6/7 quirks mode.
+
+Guide to Setting Font Sizes:
+---------------------------
+
+	px	 |		%
+--------------------
+	10 			77 
+	11 			85 
+	12 			93        	(was 92) 
+	13 			100 
+	14 			108      	(was 107) 
+	15 			116      	(was 114) 
+	16 			123.1   	(was 122) 
+	17 			131      	(was 129) 
+	18 			138.5   	(was 136) 
+	19 			146.5   	(was 144) 
+	20 			153.9   	(was 152) 
+	21 			161.6   	(was 159) 
+	22 			167 
+	23 			174 
+	24 			182 
+	25 			189 
+	26 			197 
+
+*/
+
+body 	{font: 13px/1.231 Arial, Helvetica, sans-serif; color: #888888; font-size: small;}
+table   {font-size: inherit;}
+
+/**
+ * Bump up IE to get to 13px equivalent
+ */
+
+pre,code,kbd,samp,tt { font-family: monospace; font-size: 108%; line-height: 100%;}
+
