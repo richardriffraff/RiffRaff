@@ -12,7 +12,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 
 /* BASICS */
 	html				{height:100%;}
-	body 				{height:100%; background:#fdfdfc url(../img/bg/bgBody.png) center 6px; position:relative;}
+	body 				{height:100%; background: #fdfdfc url(../img/bg/bgBody.png) center 6px; position:relative;}
 
 	/* Setup basic elements */
 		nav, 
@@ -43,7 +43,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		#navSubShadow,
 		.navMain .active,
 		.navMain .active i,
-		article hr				{background-image: url(../img/sprites/01spr_interface_24bit.png);}
+		article .hr				{background-image: url(../img/sprites/01spr_interface_24bit.png);}
 	
 	/* 2. Icons - 24 Bit */
 		.lorem					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
@@ -71,7 +71,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 
 
 /* HEADER (positioned at bottom) */
-	header		{display:block; position:absolute; bottom:0; left:0; width:100%; height:144px; background: url(../img/bg/bgHeader.png) center 0 repeat-x; z-index:9999;}
+	header		{display:block; position:fixed; bottom:0; left:0; width:100%; height:144px; background: url(../img/bg/bgHeader.png) center 0 repeat-x; z-index:9999;}
 	#hShadow	{width:100%; height:2px; margin:-2px 0 0 0; background-position:0 -3px;}
 	#logo		{float:right; padding:13px 27px 0 0;}
 	#logo img	{display:block;}
@@ -178,8 +178,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		#email		{float:left; padding:0; border-right:1px solid #292c30;}
 		#email a	{float:left; width:157px; background-position:0 3px;}
 		#phone		{float:left; width:168px; padding:0 0 0 9px; border-left:1px solid #3d4248; background-position:9px -12px;}
-		#rss		{float:right; padding:0; border-left:1px solid #3d4248;}
-		#twitter	{float:right; padding:0; border-right:1px solid #292c30;}
+		#rss		{float:right; width:75px; padding:0; border-left:1px solid #3d4248;}
+		#twitter	{float:right; width:74px; padding:0; border-right:1px solid #292c30;}
 		#rss a		{float:right; width:75px; background-position:10px -43px;}
 		#twitter a	{float:right; width:74px; background-position:0 -28px;}	
 		
@@ -196,7 +196,20 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	2. = MULTI PAGE LAYOUT	(SOME Pages)
 ************************************************/
 
-/* Articles */
+/* COLUMN SYSTEMS */
+	#template		{padding:82px 0 65px; position:relative; right:-1px;}
+
+
+	/* Three Columns */
+		.threeColumns				{margin:0; padding:0;}
+		.threeColumns .clm 			{float:left; width:306px; margin:0; padding:0; list-style-type:none;}
+		.threeColumns .clmMiddle 	{width:306px; margin:0 34px 0 34px;}
+
+
+
+
+
+/* ARTICLES */
 
 	/* Headings */
 		article h1		{margin:0 0 5px;}
@@ -205,7 +218,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 
 	/* Copy */
 		article p		{padding:0 0 20px 0;}
-		article hr		{height:14px; margin:0 0 28px; background-position:center -41px;}
+		article .hr		{height:14px; margin:0 0 28px; background-position:center -41px;}
+		article hr		{display:none;}
 	
 	
 	/* Footer */
@@ -215,14 +229,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	
 
 
-/* COLUMN SYSTEMS */
-	#template		{padding:82px 0 0; position:relative; right:-1px;}
 
-
-	/* Three Columns */
-		.threeColumns				{margin:0; padding:0;}
-		.threeColumns .clm 			{float:left; width:306px; margin:0; padding:0; list-style-type:none;}
-		.threeColumns .clmMiddle 	{width:306px; margin:0 34px 0 34px;}
 		
 		
 		

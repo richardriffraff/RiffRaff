@@ -5,7 +5,6 @@ DESCRIPTION:  	File Fixes IE7 Bugs
 
 ************************************************/
 
-
 /* @group 1. Generic Fixes */
 	/* @group Generic List Fixes */
 	dl		{float:left;}
@@ -20,9 +19,6 @@ DESCRIPTION:  	File Fixes IE7 Bugs
 
 
 /* @group 2. Navigation */	
-	
-	#nav-main ul li				{position:relative; width:auto;}
-	#nav-main ul li ul 			{position:absolute; top:32px; left:0; width:auto;}
-	#nav-main ul li ul li a		{width:140px; overflow:hidden;}
+
 	
 /* @end */
