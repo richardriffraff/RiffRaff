@@ -14,12 +14,6 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	html				{height:100%;}
 	body 				{height:100%; background: #fdfdfc url(../img/bg/bgBody.png) center 6px; position:relative;}
 
-	/* Setup basic elements */
-		nav, 
-		article,
-		aside,
-		header,
-		footer			{display:block;}
 				
 	/* Quickfix Classes */
 		.clearB			{clear: both;}
@@ -43,7 +37,10 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		#navSubShadow,
 		.navMain .active,
 		.navMain .active i,
-		article .hr				{background-image: url(../img/sprites/01spr_interface_24bit.png);}
+		article .hr,
+		.box2 .top,
+		.box2 .bottom,
+		button					{background-image: url(../img/sprites/01spr_interface_24bit.png);}
 	
 	/* 2. Icons - 24 Bit */
 		.lorem					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
@@ -59,7 +56,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		#navEthos,
 		#navShowcase,
 		#navContact,
-		.navSub a					{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
+		.navSub a				{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
 
 
 
@@ -197,8 +194,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 ************************************************/
 
 /* COLUMN SYSTEMS */
-	#template		{padding:82px 0 65px; position:relative; right:-1px;}
-
+	#template		{padding:82px 0 110px; position:relative; right:-1px;}
 
 	/* Three Columns */
 		.threeColumns				{margin:0; padding:0;}
@@ -210,24 +206,41 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 
 
 /* ARTICLES */
-
 	/* Headings */
-		article h1		{margin:0 0 5px;}
-		article .intro	{margin:0 0 14px 0;}
-		article h2		{margin:-10px 0 16px 0;}
+		article h1			{margin:0 0 5px;}
+		article .intro		{margin:0 0 14px 0;}
+		article h2			{margin:-10px 0 16px 0;}
 
 	/* Copy */
-		article p		{padding:0 0 20px 0;}
-		article .hr		{height:14px; margin:0 0 28px; background-position:center -41px;}
-		article hr		{display:none;}
-	
+		article p			{padding:0 0 20px 0;}
+		article .hr			{height:14px; margin:0 0 28px; background-position:center -41px;}
+		article hr			{display:none;}
 	
 	/* Footer */
-		article footer	{margin:0; clear:both;}
+		article footer		{display:block; margin:0; clear:both;}
+		
+		
+	/* Article 1 (Large Media Box at top, 3 columns) */
+		.article1 .intro	{margin:0 0 25px 0; float:left; clear:both; width:100%;}
+
+
 
 
 	
+/* IMAGE BASED HEADINGS */
+	.imageText1,
+	.imageText2,
+	.imageText3			{display:block; width:100%; overflow:hidden; text-indent:-9999px;}
 
+	/* Page h1 */
+		.imageText1			{height:27px;}
+	
+	/* Page h2 (Sub Heading) */
+		.imageText2			{height:10px;}
+		
+	/* Aside h2, h3, h4 */
+		.imageText3			{width:100%;}
+	
 
 
 		
@@ -239,8 +252,41 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	.box img		{display:block;}
 	
 	/* Box Offset - use to negative margin boxes with shadows inside columns */
-		.boxOffset1		{margin:0 0 0 -9px;}
+		.boxOffset1		{margin-left:-9px !important;}
+		.boxOffset2		{margin-left:-7px !important;}
+		.boxOffset3		{margin-left:-4px !important;}
+		
+	/* Box 1 - Apply to large images, adds white BG + shadow */
+		.box1			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox1.png) 0 0 no-repeat;}
 
+
+	/* Box 2 - Green BG + text, used for Asides */
+		.box2			{width:311px; margin:0 0 11px 0;}
+		.box2 .top		{height:29px; background-position:-320px -5px;}
+		.box2 .bottom	{height:41px; background-position:0 -55px;}
+		.box2 .content	{padding:0 24px; background:url(../img/bg/bgBox2Content.png) -3px 0 repeat-y;}
+		
+		/* Content */
+			.box2 h2,
+			.box2 h3	{margin-top:-1px; margin-bottom:12px;}
+			.box2 .last	{padding:0;}	
+			
+			
+			
+
+
+
+/* SIGN UP BOX - sign up to the newsletter */
+	.boxSignUp			{width:322px; height:87px; position:relative;}
+	.boxSignUp input	{position:absolute; top:38px; left:29px; width:161px;}
+	.boxSignUp button	{position:absolute; top:34px; left:205px; width:92px;  background:url(../img/bg/bgBtnSignUp.png) 0 0;}
+	
+	
+	
+	
+/* Forms */
+	button					{height:25px; text-indent:-999px; overflow:hidden; border:none; outline:none; background:none; cursor:pointer;}
+	input[type=text]		{padding:0 5px; height:16px; border:1px solid #2a2f33; background:url(../img/bg/bgTextArea.png);}
 
 
 /************************************************

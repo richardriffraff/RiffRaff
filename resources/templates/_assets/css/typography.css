@@ -76,6 +76,25 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 	
 	
 	
+
+
+/* BOXES */
+	/* Box Offset - use to negative margin boxes with shadows inside columns */
+	/* Box 1 - Apply to large images, adds white BG + shadow */
+		.box2 h2,
+		.box2 h3,
+		.box3 h4		{font-size:16px; line-height:16px; color:#50624c; font-weight:bold;}
+		.box2 p			{color:#698164;}
+
+
+
+
+
+
+
+/* Forms */
+	input[type=text]		{color:#9c9c9c; font: 11px 'Helvetica Neue', Helvetica, sans-serif; }
+	input[type=text]:focus	{color:#2A2F33;}
 	
 	
 /************************************************
