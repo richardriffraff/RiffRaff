@@ -1,0 +1,245 @@
+/************************************************
+FILE:		  	layout.css
+DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, background, borders etc
+
+	1. = PAGE LAYOUT TYPOGRAPHY 	(ALL PAGES: header footer etc)
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES: based on wrapper - '#wrapper p')
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE PAGE: based on page wrapper - .pageName .class)			
+
+
+	1. = PAGE LAYOUTS
+************************************************/
+
+/* BASICS */
+	html				{height:100%;}
+	body 				{height:100%; background:#fdfdfc url(../img/bg/bgBody.png) center 6px; position:relative;}
+
+	/* Setup basic elements */
+		nav, 
+		article,
+		aside,
+		header,
+		footer			{display:block;}
+				
+	/* Quickfix Classes */
+		.clearB			{clear: both;}
+		.clearL			{clear: left;}
+		.clearR			{clear: right;}
+		.floatL			{float: left;}
+		.floatR			{float: right;}
+		.clear			{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
+		.clearfix:after	{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+		.container		{max-width:986px; margin:0 auto;}
+
+
+
+
+
+/* SPRITES */
+
+	/* 1. Interface - 24 Bit */
+		#fShadow,
+		#hShadow,
+		#navSubShadow,
+		.navMain .active,
+		.navMain .active i,
+		article hr				{background-image: url(../img/sprites/01spr_interface_24bit.png);}
+	
+	/* 2. Icons - 24 Bit */
+		.lorem					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
+	
+	/* 3. Language */
+		#rss a,
+		#twitter a,
+		#email a,
+		#phone,
+		#navHome,
+		#navServices,
+		#navMethod,
+		#navEthos,
+		#navShowcase,
+		#navContact,
+		.navSub a					{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
+
+
+
+
+
+
+
+
+
+
+/* HEADER (positioned at bottom) */
+	header		{display:block; position:absolute; bottom:0; left:0; width:100%; height:144px; background: url(../img/bg/bgHeader.png) center 0 repeat-x; z-index:9999;}
+	#hShadow	{width:100%; height:2px; margin:-2px 0 0 0; background-position:0 -3px;}
+	#logo		{float:right; padding:13px 27px 0 0;}
+	#logo img	{display:block;}
+	
+	/* Nav Main */
+		.navMain				{float:left; height:47px;}
+		.navMain ul				{margin:0; padding:17px 0 0;}
+		.navMain li				{float:left; padding:4px 0 16px; list-style-type:none; }
+		.navMain a				{display:block; padding:0 27px 3px; border-left:1px solid #3c4046; border-right:1px solid #282b2f; }
+		.navMain .first			{border-left:none;}
+		.navMain .last			{border-right:none;}
+		.navMain .active 		{background-position:1px -5px;}
+		.navMain .active a		{position:relative;}
+		.navMain .active i		{display:block; position:absolute; right:0; top:-4px; width:3px; height:31px; background-position:-317px -9px;}
+		.navMain nav			{/* display:none; */}
+		.navMain li:hover nav	{display:block;}
+		
+		/* Image Replacement Text */
+			#navHome,
+			#navServices,
+			#navMethod,
+			#navEthos,
+			#navShowcase,
+			#navContact			{height:9px; text-indent:-9999px; overflow:hidden;}
+			
+			#navHome			{width:40px; background-position:27px -58px;}
+			#navServices		{width:63px; background-position:27px -73px;}
+			#navMethod			{width:57px; background-position:27px -88px;}
+			#navEthos			{width:42px; background-position:27px -103px;}
+			#navShowcase		{width:75px; background-position:27px -118px;}
+			#navCareers			{width:60px; background-position:27px -133px;}
+			#navContact			{width:65px; background-position:27px -148px;}
+			
+			/* Active, Hover, Focus */
+				strong #navHome,
+				#navHome:hover		{background-position:right -58px;}
+				strong #navServices,
+				#navServices:hover	{background-position:right -73px;}
+				strong #navMethod,
+				#navMethod:hover	{background-position:right -88px;}
+				strong #navEthos,
+				#navEthos:hover		{background-position:right -103px;}
+				strong #navShowcase,
+				#navShowcase:hover	{background-position:right -118px;}
+				strong #navCareers.
+				#navCareers:hover	{background-position:right -133px;}
+				strong #navContact,
+				#navContact:hover	{background-position:right -148px;}
+		
+		/* Nav Sub*/
+			.navSub				{position:absolute; left:0; top:47px; width:100%; overflow:hidden; margin:0; padding:0; background:#2d3136;}
+			.navSub ul			{width:675px; margin:0 auto; position:relative; left:-134px; padding:20px 0 16px;}
+			.navSub li			{width:210px; margin:0 15px 0 0; padding:0 0 3px 0;}
+			.navSub a			{padding:0; width:213px; height:21px; text-indent:-9999px; overflow:hidden; cursor:pointer !important; border:none;}
+			.navSub strong a	{cursor:default !important;}
+			
+			/* Image Replacement Text */
+				#navAll			{background-position:0 -165px;}
+				#navDesDev		{background-position:0 -190px;}
+				#navLarScal		{background-position:0 -215px;}
+				#navSocCom		{background-position:0 -240px;}
+				#navOnlTv		{background-position:0 -265px;}
+				#navBesCon		{background-position:0 -290px;}
+				#navTaiECo		{background-position:0 -315px;}
+				
+				/* Active, hover, focus */
+					strong #navAll,
+					#navAll:hover		{background-position:right -165px;}
+					strong #navDesDev,
+					#navDesDev:hover	{background-position:right -190px;}
+					strong #navLarScal,
+					#navLarScal:hover	{background-position:right -215px;}
+					strong #navSocCom,
+					#navSocCom:hover	{background-position:right -240px;}
+					strong #navOnlTv,
+					#navOnlTv:hover		{background-position:right -265px;}
+					strong #navBesCon,
+					#navBesCon:hover	{background-position:right -290px;}
+					strong #navTaiECo,
+					#navTaiECo:hover	{background-position:right -315px;}
+	
+	/* Has JS */
+		/* Header */
+			.hasJs header		{overflow:hidden; height:45px;}
+	
+		/* Nav Sub */
+			.hasJs .navSub	  {display:block; overflow:hidden;}
+			
+			
+			
+		
+/* FOOTER (positioned at top) */
+	#pageFooter		{display:block; position:absolute; top:0; left:0; width:100%; min-height:22px; background: #303439;}
+	#fShadow		{width:100%; height:2px; position:relative; bottom:-2px;}
+	#pageFooter ul	{margin:0; padding:5px 0 3px;}
+	#pageFooter li	{list-style-type:none;}
+	
+	/* Text */
+		#email a,
+		#phone,
+		#twitter a,
+		#rss a		{height:12px; text-indent:-9999px;}		
+	
+		#email		{float:left; padding:0; border-right:1px solid #292c30;}
+		#email a	{float:left; width:157px; background-position:0 3px;}
+		#phone		{float:left; width:168px; padding:0 0 0 9px; border-left:1px solid #3d4248; background-position:9px -12px;}
+		#rss		{float:right; padding:0; border-left:1px solid #3d4248;}
+		#twitter	{float:right; padding:0; border-right:1px solid #292c30;}
+		#rss a		{float:right; width:75px; background-position:10px -43px;}
+		#twitter a	{float:right; width:74px; background-position:0 -28px;}	
+		
+		/* Hover */
+			#email a:hover		{background-position:right 3px;}
+			#phone a:hover		{background-position:right -12px;}
+			#twitter a:hover	{background-position:right -28px;}
+			#rss a:hover		{background-position:right -43px;}
+
+
+
+
+/************************************************
+	2. = MULTI PAGE LAYOUT	(SOME Pages)
+************************************************/
+
+/* Articles */
+
+	/* Headings */
+		article h1		{margin:0 0 5px;}
+		article .intro	{margin:0 0 14px 0;}
+		article h2		{margin:-10px 0 16px 0;}
+
+	/* Copy */
+		article p		{padding:0 0 20px 0;}
+		article hr		{height:14px; margin:0 0 28px; background-position:center -41px;}
+	
+	
+	/* Footer */
+		article footer	{margin:0; clear:both;}
+
+
+	
+
+
+/* COLUMN SYSTEMS */
+	#template		{padding:82px 0 0; position:relative; right:-1px;}
+
+
+	/* Three Columns */
+		.threeColumns				{margin:0; padding:0;}
+		.threeColumns .clm 			{float:left; width:306px; margin:0; padding:0; list-style-type:none;}
+		.threeColumns .clmMiddle 	{width:306px; margin:0 34px 0 34px;}
+		
+		
+		
+		
+/* BOXES */
+	.box,
+	.box img		{display:block;}
+	
+	/* Box Offset - use to negative margin boxes with shadows inside columns */
+		.boxOffset1		{margin:0 0 0 -9px;}
+
+
+
+/************************************************
+	3. = SINGLE PAGE CONTENT LAYOUT	 (ONE Page)
+************************************************/	
+
+
+		
+	

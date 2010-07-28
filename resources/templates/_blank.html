@@ -3,47 +3,57 @@
 <head>
 	<meta charset="utf-8" />	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-	<link href="css/reset.css" rel="stylesheet" type="text/css" />
-	<link href="css/layout.css" rel="stylesheet" type="text/css" />
-	<link href="css/typography.css" rel="stylesheet" type="text/css" />
-	<!--[if lte IE 7]><link href="css/fix_ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
-	<!--[if lt IE 7]><link href="css/fix_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->	
-	<link href="css/fix_print.css" rel="stylesheet" type="text/css" media="print" />
 	
-	<script src='js/jquery14.js'></script>
-	<script src="js/jquery.easing.js"></script>
-	<script src='js/application.js'></script>
+	<link href="_assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="_assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="_assets/css/typography.css" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 7]><link href="_assets/css/fix_ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
+	<!--[if lt IE 7]><link href="_assets/css/fix_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
+	
+	<script src='_assets/js/jquery14.js'></script>
+	<script src="_assets/js/jquery.easing.js"></script>
+	<script src='_assets/js/application.js'></script>
+	<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<title>RiffRaff - Web Design &amp; Development</title>
 
-	<title>Riff Raff - Blank Page</title>	
 </head>
-<body id="ethos">	
+<body>	
 	
-	<header >
+	
+	<header>
 		<div class="container clearfix">
-			<a href="#" title="View: RiffRaff Homepage" id="logo">
-				<img src="_assets/img/header/logo.png" width="114" height="26" alt="RiffRaff Logo" />
+			<a href="/" title="RiffRaff: Web Design &amp; Web Development" id="logo">
+				<img src="_assets/img/riffRaff.png" width="114" height="26" alt="RiffRaff Logo" />
 			</a>
 			<nav id="navMain" class="navMain">
 				<ul class="clearfix">
-					<li><a href="#" title="View: RiffRaff Homepage" class="first">Home</a></li>
-					<li><a href="#" title="Find Out: The Services RiffRaff Offer">All Services</a></li>
-					<li><a href="#" title="Read: RiffRaff's Unique Method">Method</a></li>
+					<li><a href="/" title="View: RiffRaff Homepage" class="first" id="navHome">Home<i></i></a></li>
 					<li class="active">
-						<strong><a href="#" title="Read: RiffRaff's Unique Ethos">Ethos</a></strong>
-						<nav id="nSEthos" class="navSub clearfix">
+						<strong>
+							<a href="/web-design-development-specialities.html" title="The Web Design &amp; Development Services RiffRaff Offer" id="navServices">Services</a>
+						</strong>
+						<nav class="navSub clearfix">
 							<ul class="clearfix">
-								<li><a href="#" title="About: RiffRaff's Holistic Approach To Design">Holistic Design</a></li>
-								<li><a href="#" title="About: The Best Practices RiffRaff employs">Best Practice</a></li>
-								<li><a href="#" title="About: The Great Service RiffRaff offers">Great Service</a></li>
+								<li><strong><a id="navAll" href="/web-design-development-specialities.html" title="The Web Design &amp; Development Services RiffRaff Offer">All Services</a></strong></li>
+								<li><a id="navDesDev" href="/specialities/web-design-and-development.html" title="Website Design &amp; Development with RiffRaff">Web Design &amp; Development</a></li>
+								<li><a id="navLarScal" href="/specialities/large-scale-web-applications.html" title="Large Scale Web Application Design &amp; Development">Large Scale Web Applications</a></li>
+								<li><a id="navSocCom" href="/specialities/social-community-portal-websites.html" title="Social &amp; Community Portal Design &amp; Development">Social &amp; Community Portals</a></li>
+								<li><a id="navOnlTv" href="/specialities/online-tv-video-platforms.html" title="Online TV &amp; Video Platform Design &amp; Development">Online TV &amp; Video Platforms</a></li>
+								<li><a id="navBesCon" href="/specialities/bespoke-content-management-sytems.html" title="Bespoke Content Management System Design &amp; Development">Bespoke <abbr title="Content Management Systems">CMS</abbr> Development</a></li>
+								<li><a id="navTaiECo" href="/specialities/tailored-ecommerce-websites.html" title="Tailored E-Commerce Design &amp; Development">Tailored E-Commerce Solutions</a></li>
 							</ul>
 						</nav>
 					</li>
-					<li><a href="#" title="View: RiffRaff's Portolio">Showcase</a></li>
-					<li><a href="#" title="Contact Details for RiffRaff">Contact</a></li>
-					<li><a href="#" title="About: Working for RiffRaff">Careers</a></li>
+					<li><a href="/web-design-development-method.html" title="RiffRaff's Method For Web Design &amp; Development" id="navMethod">Method<i></i></a></li>
+					<li><a href="/web-design-development-ethos.html" title="RiffRaff's Ethos for Web Design &amp; Development" id="navEthos">Ethos<i></i></a></li>
+					<li><a href="/web-design-development-showcase.html" title="RiffRaff's Web Design &amp; Web Development Portolio" id="navShowcase">Showcase<i></i></a></li>
+					<li><a href="/contact-riffraff.html" title="Contact Details for RiffRaff" class="last" id="navContact">Contact<i></i></a></li>
 				</ul>
 			</nav>
+			
 		</div>	
 	</header>	
 	
@@ -51,22 +61,97 @@
 <!-- END LAYOUT (Header) [] -->
 <!-- START LAYOUT (ID: Template) [All Content always sits inside the template] -->
 		
-	<div id="template" class="one-clm clearfix">
+	<div id="template" class="container clearfix">
 		
+		<article class="threeColumns">
+			
+			<h1>Our Design Process</h1>
+			<p class="intro">Page sub heading will go below here lorem ipsum dolar sit amet consecteture...</p>
+			
+			<div class="clm">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <a href="#">vitae dicta sunt explicabo</a>.</p> 
+
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+			</div>
+			
+		<!-- END: CLM1 -->
+			
+			<div class="clm clmMiddle">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<h2>Lorem ipsum dolor sit amet consectetur?</h2>
+
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <a href="#">vitae dicta sunt explicabo</a>.</p> 
+
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</p>
+			</div>
+			
+		<!-- END: CLM2 -->
+			
+			<div class="clm">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae <a href="#">vitae dicta sunt explicabo</a>.</p> 
+
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+			</div>
+			
+		<!-- END: CLM3 -->	
+	
+			<footer>
+				<hr />
+				<nav>
+					<ul class="threeColumns clearfix">
+						<li class="clm">
+							<a href="#" title="View: Why Riffraff Views Business As Karma" class="box boxOffset1">
+								<img src="_assets/img/content/aside/our-ethos-business-is-karma.png" width="322" height="87" alt="Our Ethos: Business Is Karma" />
+							</a>
+						</li>
+						<li class="clm clmMiddle">
+							<a href="#" title="View: How RiffRaff Design and Develop Websites" class="box boxOffset1">
+								<img src="_assets/img/content/aside/our-process-findout-how-we-do-it.png" width="322" height="87" alt="Our Process: Find out How We Do It" />
+							</a>
+						</li>
+						<li class="clm">
+							<a href="#" title="View: RiffRaff's Web Design &amp; Development Portfolio" class="box boxOffset1">
+								<img src="_assets/img/content/aside/our-portfolio.png" width="322" height="87" alt="Our Portfolio: See A Section of work" />
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+			
+			
+		<!-- END: Article Footer -->
+			
+		</article>
+		
+	<!-- END Article -->
+		
+	
+	
+		
+	
 
 	</div>
 		
 <!-- END LAYOUT (ID: Template) [All Content Must have ended by here] -->
 <!-- START LAYOUT (ID: Footer) [Copyright + Global Nav] -->
-	<footer>
+
+	<footer id="pageFooter">
 		<div class="container">
 			<address>
-				<span id="phone">+44 (0)191 233 1153</span>
-				<a href="#" title="Email RiffRaff" id="email">info@studioriffraff.com</a>
-				<a href="#" title="Keep Upto date via RSS" class="rss">Rss</a>
+				<ul class="clearfix">
+					<li id="email"><a href="mailto:info@studioriffraff.com" title="Email RiffRaff">info@studioriffraff.com</a></li>
+					<li id="phone">+44 (0)191 233 1153</li>
+					<li id="rss"><a href="#" title="Keep upto date via RSS">rss</a></li>
+					<li id="twitter"><a href="#" title="RiffRaff on Twitter">twitter</a></li>
+				</ul>
 			</address>
 		</div>	
+		<div id="fShadow"></div>
 	</footer>
 	
 	<script>ie7 = false; ie6 = false;</script>

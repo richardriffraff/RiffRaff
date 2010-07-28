@@ -1,0 +1,84 @@
+/************************************************
+FILE:		  	typography.css
+DESCRIPTION:  	Defines typography - line-height, text-align, font-size, color, font-weight etc
+
+	1. = PAGE LAYOUT TYPOGRAPHY 	(ALL PAGES: header footer etc)
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES: based on wrapper - '#wrapper p')
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE PAGE: based on page wrapper - .pageName .class)
+			
+************************************************/
+
+
+/************************************************
+	1. = PAGE LAYOUT TYPOGRAPHY		
+************************************************/
+body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; color: #636363;}
+
+
+
+/* HEADER */
+
+	/* Nav Main */
+		.navMain a,
+		.navMain a:link,
+		.navMain a:visited			{color:#4b5259; font-size:12px; line-height:12px; text-transform:uppercase; letter-spacing:0.05em;}
+		.navMain a:hover,
+		.navMain a:focus,
+		.navMain a:active,
+		.navMain strong	a			{color:#e4e4e2 !important; font-weight:normal !important;}
+		
+		/* Nav Sub*/
+			.navSub					{text-align:left;}
+			.navSub a,
+			.navSub a:link,
+			.navSub a:visited		{color:#929292; font-size:10px; text-transform:uppercase;}
+
+
+/* FOOTER (positioned at top) */
+	#pageFooter li		{font-size:11px; line-height:11px; color:#929292; font-style:normal; letter-spacing:0.1em;}
+	#pageFooter a,
+	#pageFooter a:link,
+	#pageFooter a:visited	{color:#929292; line-height:11px;}
+	#pageFooter a:hover,
+	#pageFooter a:focus,
+	#pageFooter a:active		{color:#e4e4e2;}
+
+
+
+/* Containers */
+	.container	{text-align:left;}
+
+	
+	
+	
+/************************************************
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES)
+************************************************/
+
+
+/* ARTICLES */
+
+	/* Headings */
+		article h1			{font-size:28px; font-weight:bold; line-height:28px; color:#2a2e33;}
+		article .intro		{color:#949ca0; font-size:13px; line-height:13px;}
+		article h2			{color:#33383c; font-size:12px;}
+		
+
+	/* Copy */
+		article p			{color:#636363; font-size:12px; line-height:21px;}	
+		article a,
+		article a:link,
+		article a:visited 	{color: #ed1847; text-decoration:none;}
+		article a:hover,
+		article a:focus,
+		article a:active 	{text-decoration:underline;}
+	
+	
+	
+	
+	
+	
+/************************************************
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE Page)
+************************************************/
+
