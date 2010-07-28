@@ -6,6 +6,8 @@ DESCRIPTION:  	File Fixes IE7 Bugs
 ************************************************/
 
 /* @group 1. Generic Fixes */
+	.clearfix	{zoom:1;}
+
 	/* @group Generic List Fixes */
 	dl		{float:left;}
 	dt 		{float:left; clear:left;}				
