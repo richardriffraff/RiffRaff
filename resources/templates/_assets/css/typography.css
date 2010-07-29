@@ -18,7 +18,7 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 
 /* HEADER */
 
-	/* Nav Main */
+	/* Nav Main */	
 		.navMain a,
 		.navMain a:link,
 		.navMain a:visited			{color:#4b5259; font-size:12px; line-height:12px; text-transform:uppercase; letter-spacing:0.05em;}
@@ -62,6 +62,8 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 		article h1			{font-size:28px; font-weight:bold; line-height:28px; color:#2a2e33;}
 		article .intro		{color:#949ca0; font-size:13px; line-height:13px;}
 		article h2			{color:#33383c; font-size:12px;}
+		article h3,
+		article h4			{color:#33383c;}
 		
 
 	/* Copy */
@@ -72,7 +74,14 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 		article a:hover,
 		article a:focus,
 		article a:active 	{text-decoration:underline;}
-	
+		article li			{color:#33383c; font-size:12px;}
+		
+		/* Specific Types */
+			/* Article 1 (Large Media Box at top, 3 columns, see: _generic_2.html) */
+			/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: team.html) */
+				.article2 h2		{font-size:20px; line-height:20px;}
+				.article2 h3		{font-size:18px; line-height:18px;}
+				.article2 h4		{font-size:13px; line-height:13px;}
 	
 	
 	

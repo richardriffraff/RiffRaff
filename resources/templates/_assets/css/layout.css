@@ -43,7 +43,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		button					{background-image: url(../img/sprites/01spr_interface_24bit.png);}
 	
 	/* 2. Icons - 24 Bit */
-		.lorem					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
+		article ul li,
+		.icon1					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
 	
 	/* 3. Language */
 		#rss a,
@@ -74,17 +75,17 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	#logo img	{display:block;}
 	
 	/* Nav Main */
-		.navMain				{float:left; height:47px;}
-		.navMain ul				{margin:0; padding:17px 0 0;}
-		.navMain li				{float:left; padding:4px 0 16px; list-style-type:none; }
-		.navMain a				{display:block; padding:0 27px 3px; border-left:1px solid #3c4046; border-right:1px solid #282b2f; }
-		.navMain .first			{border-left:none;}
-		.navMain .last			{border-right:none;}
-		.navMain .active 		{background-position:1px -5px;}
-		.navMain .active a		{position:relative;}
-		.navMain .active i		{display:block; position:absolute; right:0; top:-4px; width:3px; height:31px; background-position:-317px -9px;}
-		.navMain nav			{/* display:none; */}
-		.navMain li:hover nav	{display:block;}
+		.navMain					{float:left; height:47px;}
+		.navMain ul					{margin:0; padding:17px 0 0;}
+		.navMain li					{float:left; padding:4px 0 16px; list-style-type:none; }
+		.navMain a					{display:block; padding:0 27px 3px; border-left:1px solid #3c4046; border-right:1px solid #282b2f; }
+		.navMain .first				{border-left:none;}
+		.navMain .last				{border-right:none;}
+		.navMain .active 			{background-position:1px -5px;}
+		.navMain .active a			{position:relative;}
+		.navMain .active i			{display:block; position:absolute; right:0; top:-4px; width:3px; height:31px; background-position:-317px -9px;}
+		.navMain .navSub			{/* display:none; */}
+		.navMain li:hover .navSub	{display:block;}
 		
 		/* Image Replacement Text */
 			#navHome,
@@ -149,6 +150,25 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 					#navBesCon:hover	{background-position:right -290px;}
 					strong #navTaiECo,
 					#navTaiECo:hover	{background-position:right -315px;}
+					
+					
+			/* Contact Sub Nav */
+				#contactInfo		{padding:20px 0 0 0;}
+				
+				/* Address */
+					#adr 			{float:left; width:164px;}
+					
+				/* Hours */
+					#hours			{float:left; width:267px;}
+					#hours dt		{float:left; width:110px;}
+					#hours dd		{float:left; width:auto;}
+					
+					
+				
+				
+				/* Contact Form */
+					#frmGetinTouch	{float:right; width:490px;}
+		
 	
 	/* Has JS */
 		/* Header */
@@ -213,15 +233,28 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 
 	/* Copy */
 		article p			{padding:0 0 20px 0;}
-		article .hr			{height:14px; margin:0 0 28px; background-position:center -41px;}
+		article .hr			{height:14px; margin:0 0 28px; clear:both; background-position:center -41px;}
 		article hr			{display:none;}
+		article ul			{margin:0; padding:2px 0 18px 21px;}
+		article li			{margin:0 0 12px 0; padding:0 0 0 21px; background-position:0 1px;}
 	
 	/* Footer */
 		article footer		{display:block; margin:0; clear:both;}
 		
+	/* Specific Types */
 		
-	/* Article 1 (Large Media Box at top, 3 columns) */
-		.article1 .intro	{margin:0 0 25px 0; float:left; clear:both; width:100%;}
+		/* Article 1 (Large Media Box at top, 3 columns, see: _generic_2.html) */
+			.article1 .intro	{margin:0 0 25px 0; float:left; clear:both; width:100%;}
+			
+		/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: team.html) */
+			.article2 .intro	{margin-bottom:26px;}
+			.article2 .box3		{float:left; margin-right:27px;}
+			.article2 h2		{margin-top:19px;}
+			.article2 h3		{margin-top:-14px; margin-bottom:19px;}
+			.article2 h4		{margin-bottom:5px;}
+			.article2 .icon1	{float:right; margin-top:-8px; margin-bottom:23px;}
+		
+		
 
 
 
@@ -256,8 +289,10 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.boxOffset2		{margin-left:-7px !important;}
 		.boxOffset3		{margin-left:-4px !important;}
 		
-	/* Box 1 - Apply to large images, adds white BG + shadow */
+		
+	/* Box 1 - Apply to large images (see img dimensions below), adds white BG + shadow */
 		.box1			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox1.png) 0 0 no-repeat;}
+		.box1 img		{width:624px; height:351px;}
 
 
 	/* Box 2 - Green BG + text, used for Asides */
@@ -269,8 +304,12 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		/* Content */
 			.box2 h2,
 			.box2 h3	{margin-top:-1px; margin-bottom:12px;}
-			.box2 .last	{padding:0;}	
+			.box2 .last	{padding:0;}
+		
 			
+	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
+		.box3			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox3.png) 0 0 no-repeat;}
+		.box3 img		{width:422px; height:237px;}	
 			
 			
 
@@ -284,9 +323,17 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	
 	
 	
-/* Forms */
+/* FORMS */
 	button					{height:25px; text-indent:-999px; overflow:hidden; border:none; outline:none; background:none; cursor:pointer;}
 	input[type=text]		{padding:0 5px; height:16px; border:1px solid #2a2f33; background:url(../img/bg/bgTextArea.png);}
+	
+	
+	
+
+/* Icon Links */
+	.icon1		{display:block; height:19px; padding:0 23px 0 0; background-position:right -120px;}
+	
+
 
 
 /************************************************
