@@ -105,6 +105,13 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 	input[type=text]		{color:#9c9c9c; line-height:11px; font: 11px 'Helvetica Neue', Helvetica, sans-serif; }
 	input[type=text]:focus	{color:#2A2F33;}
 	
+/* Icon Links */	
+	/* Red Arrow, right side */
+		.icon1		{line-height:18px;}
+	/* Red Arrow, left side */
+		.icon2		{line-height:18px;}	
+	
+	
 	
 /************************************************
 	3. = SINGLE PAGE TYPOGRAPHY		(ONE Page)
