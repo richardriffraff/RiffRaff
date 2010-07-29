@@ -95,6 +95,7 @@
 				})
 				
 				// 2. Header: HoverOut - Wait c.time, if user has not Hovered back in close the header
+
 				c.header.hover( function() {
 					canCollapseHeader = false;
 				}, function() {
@@ -102,7 +103,7 @@
 					toggleHeaderHeight(c.navMainH, c.speed*2);
 					
 				})
-			
+
     		});
     	}
 	}

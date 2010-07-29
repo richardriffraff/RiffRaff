@@ -18,30 +18,41 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 
 /* HEADER */
 
-	/* Nav Main */	
-		.navMain a,
-		.navMain a:link,
-		.navMain a:visited			{color:#4b5259; font-size:12px; line-height:12px; text-transform:uppercase; letter-spacing:0.05em;}
-		.navMain a:hover,
-		.navMain a:focus,
-		.navMain a:active,
-		.navMain strong	a			{color:#e4e4e2 !important; font-weight:normal !important;}
-		
+	/* Nav Main */			
 		/* Nav Sub*/
-			.navSub					{text-align:left;}
-			.navSub a,
-			.navSub a:link,
-			.navSub a:visited		{color:#929292; font-size:10px; text-transform:uppercase;}
+			/* Contact Sub Nav */				
+				/* Address */
+					#adr 					{font-size:12px; line-height:16px; color:#8e9294; font-style:normal;}
+					#adr strong				{color:#f7f7f7; font-size:13px;}
+					
+				/* Contacts */
+					#contacts				{line-height:16px; font-size:12px;}
+					#contacts dt			{color:#c0c7cb;}
+					#contacts dd			{color:#8d9193;}
+					#contacts a:link,
+					#contacts a:visited		{color:#ed1847; text-decoration:none;}
+					#contacts a:hover,
+					#contacts a:focus,
+					#contacts a:active		{text-decoration:underline;}
+					
+				/* Hours */
+					#hours				{line-height:16px; font-size:12px;}
+					#hours strong		{color:#f7f7f7; font-size:13px;}
+					#hours dt			{color:#c1c8cc;}
+					#hours dd			{color:#8d9193;}
+					#hours a:link,
+					#hours a:visited	{color:#ed1847; text-decoration:none;}
+					#hours a:hover,
+					#hours a:focus,
+					#hours a:active		{text-decoration:underline;}
+			
+				/* Contact Form */
+					#getInTouch legend a	{color:#f7f7f7; font-size:13px;}
+					#getInTouch dt			{color:#c1c8cc; font-size:11px;}
+			
 
 
 /* FOOTER (positioned at top) */
-	#pageFooter li		{font-size:11px; line-height:11px; color:#929292; font-style:normal; letter-spacing:0.1em;}
-	#pageFooter a,
-	#pageFooter a:link,
-	#pageFooter a:visited	{color:#929292; line-height:11px;}
-	#pageFooter a:hover,
-	#pageFooter a:focus,
-	#pageFooter a:active		{color:#e4e4e2;}
 
 
 
@@ -68,7 +79,6 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 
 	/* Copy */
 		article p			{color:#636363; font-size:12px; line-height:21px;}	
-		article a,
 		article a:link,
 		article a:visited 	{color: #ed1847; text-decoration:none;}
 		article a:hover,
