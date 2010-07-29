@@ -102,7 +102,7 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 
 
 /* Forms */
-	input[type=text]		{color:#9c9c9c; font: 11px 'Helvetica Neue', Helvetica, sans-serif; }
+	input[type=text]		{color:#9c9c9c; line-height:11px; font: 11px 'Helvetica Neue', Helvetica, sans-serif; }
 	input[type=text]:focus	{color:#2A2F33;}
 	
 	
