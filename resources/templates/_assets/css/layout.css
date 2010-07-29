@@ -44,7 +44,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	
 	/* 2. Icons - 24 Bit */
 		article ul li,
-		.icon1					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
+		.icon1,
+		.icon2					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
 	
 	/* 3. Language */
 		#rss a,
@@ -243,16 +244,24 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		
 	/* Specific Types */
 		
-		/* Article 1 (Large Media Box at top, 3 columns, see: _generic_2.html) */
+		/* Article 1 (Large Media Box at top, 3 columns, see: article_2.html) */
 			.article1 .intro	{margin:0 0 25px 0; float:left; clear:both; width:100%;}
 			
-		/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: team.html) */
+		/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: _article2.html) */
 			.article2 .intro	{margin-bottom:26px;}
 			.article2 .box3		{float:left; margin-right:27px;}
 			.article2 h2		{margin-top:19px;}
 			.article2 h3		{margin-top:-14px; margin-bottom:19px;}
 			.article2 h4		{margin-bottom:5px;}
 			.article2 .icon1	{float:right; margin-top:-8px; margin-bottom:23px;}
+			
+		/* Article 3 (3 colums, sma media box top of each column, see: _article3.html) */
+			.article3 .intro	{margin-bottom:25px;}
+			.article3 h2		{margin-top:0; margin-bottom:3px;}
+			.article3 ul		{padding-top:5px}
+			.article3 li		{background:none; padding-left:0; margin-bottom:9px;}
+			.article3 .icon2	{position:relative; left:-5px;}
+					
 		
 		
 
@@ -311,8 +320,12 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 			
 	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
 		.box3			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox3.png) 0 0 no-repeat;}
-		.box3 img		{width:422px; height:237px;}	
-			
+		.box3 img		{width:422px; height:237px;}
+		
+		
+	/* Box 4 - Apply to sma images (see img dimensions below), adds white BG + shadow */
+		.box4			{display:block; padding:13px 15px 15px 13px; margin:0 0 14px 0; background:url(../img/bg/bgBox4.png) 0 0 no-repeat;}
+		.box4 img		{width:286px; height:102px;}	
 			
 
 
@@ -320,20 +333,23 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 /* SIGN UP BOX - sign up to the newsletter */
 	.boxSignUp			{width:322px; height:87px; position:relative;}
 	.boxSignUp input	{position:absolute; top:38px; left:29px; width:161px;}
-	.boxSignUp button	{position:absolute; top:34px; left:205px; width:92px;  background:url(../img/bg/bgBtnSignUp.png) 0 0;}
+	.boxSignUp button	{position:absolute; top:34px; left:205px; width:81px;  background:url(../img/bg/bgBtnSignUp.png) 0 0;}
 	
 	
 	
 	
 /* FORMS */
-	button					{height:25px; text-indent:-999px; overflow:hidden; border:none; outline:none; background:none; cursor:pointer;}
-	input[type=text]		{padding:0 5px; height:16px; border:1px solid #2a2f33; background:url(../img/bg/bgTextArea.png);}
+	button				{height:26px; text-indent:-999px; overflow:hidden; border:none; outline:none; background:none; cursor:pointer;}
+	input[type=text]	{padding:0 5px; height:16px; border:1px solid #2a2f33; background:url(../img/bg/bgTextArea.png);}
 	
 	
 	
 
 /* Icon Links */
-	.icon1		{display:block; height:19px; padding:0 23px 0 0; background-position:right -120px;}
+	/* Red Arrow, right side */
+		.icon1		{display:block; height:19px; padding:0 23px 0 0; background-position:right -120px;}
+	/* Red Arrow, left side */
+		.icon2		{display:block; height:19px; padding:0 0 0 23px; background-position:-22px -120px;}
 	
 
 
