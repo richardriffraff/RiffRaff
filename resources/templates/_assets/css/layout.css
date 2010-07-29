@@ -45,7 +45,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	/* 2. Icons - 24 Bit */
 		article ul li,
 		.icon1,
-		.icon2					{background-image: url(../img/sprites/02spr_interface_24bit.png); background-repeat:no-repeat;}
+		.icon2,
+		.icon3					{background-image: url(../img/sprites/02spr_icons_24bit.png); background-repeat:no-repeat;}
 	
 	/* 3. Language */
 		#rss a,
@@ -261,6 +262,11 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 			.article3 ul		{padding-top:5px}
 			.article3 li		{background:none; padding-left:0; margin-bottom:9px;}
 			.article3 .icon2	{position:relative; left:-5px;}
+			
+		/* Article 4 (Red box, then 3 columns, see: showcase_landing.html) */
+			.article4 .intro	{margin-bottom:27px;}
+			.article4 nav h2	{margin-top:0; margin-bottom:18px;}
+			.article4 nav li	{background:none;}
 					
 		
 		
@@ -272,7 +278,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 /* IMAGE BASED HEADINGS */
 	.imageText1,
 	.imageText2,
-	.imageText3			{display:block; width:100%; overflow:hidden; text-indent:-9999px;}
+	.imageText3				{display:block; width:100%; overflow:hidden; text-indent:-9999px;}
 
 	/* Page h1 */
 		.imageText1			{height:27px;}
@@ -299,12 +305,13 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.boxOffset1		{margin-left:-9px !important;}
 		.boxOffset2		{margin-left:-7px !important;}
 		.boxOffset3		{margin-left:-4px !important;}
+		.boxOffset4		{margin-left:-8px !important;}
 		
 		
 	/* Box 1 - Apply to large images (see img dimensions below), adds white BG + shadow */
-		.box1			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox1.png) 0 0 no-repeat;}
+		.box1			{padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox1.png) 0 0 no-repeat;}
 		.box1 img		{width:624px; height:351px;}
-
+		
 
 	/* Box 2 - Green BG + text, used for Asides */
 		.box2			{width:311px; margin:0 0 11px 0;}
@@ -316,17 +323,54 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 			.box2 h2,
 			.box2 h3	{margin-top:-1px; margin-bottom:12px;}
 			.box2 .last	{padding:0;}
-		
 			
+		
 	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
-		.box3			{display:block; padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox3.png) 0 0 no-repeat;}
+		.box3			{padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox3.png) 0 0 no-repeat;}
 		.box3 img		{width:422px; height:237px;}
 		
 		
 	/* Box 4 - Apply to sma images (see img dimensions below), adds white BG + shadow */
-		.box4			{display:block; padding:13px 15px 15px 13px; margin:0 0 14px 0; background:url(../img/bg/bgBox4.png) 0 0 no-repeat;}
-		.box4 img		{width:286px; height:102px;}	
+		.box4			{padding:13px 15px 15px 13px; margin:0 0 14px 0; background:url(../img/bg/bgBox4.png) 0 0 no-repeat;}
+		.box4 img		{width:286px; height:102px;}
 			
+		
+	/* Box 5 - Red Background, image on left, text on right, large.  (See: showcase_landing.html) */
+		.box5				{width:1000px; height:384px; margin-bottom:23px; background:url(../img/bg/bgBox5.png) 0 0 no-repeat;}
+		.box5 .content		{width:966px;  height:351px; margin:0 7px; padding:10px; overflow:hidden; background:url(../img/bg/bgBox5.png) -7px 0 no-repeat;}
+		.box5 #slideshow	{float:left; margin-right:20px;}
+		.box5 h2			{margin-top:23px !important; margin-bottom:4px; height:13px;}
+		.box5 h3			{padding-bottom:3px;}
+		.box5 ul			{padding-left:661px; padding-bottom:15px;}
+		.box5 li			{background-position:0 -240px;}
+		.box5 .icon3		{float:right; margin-right:28px;}
+		
+		
+	/* Box 6 - White, shadows (See: showcase_landing.html) */
+		.box6				{width:266px; height:260px; padding:26px 28px 0; margin-bottom:32px; background:url(../img/bg/bgBox6.png) 0 0 no-repeat;}
+		.box6 img			{margin:0 auto 10px;}
+		.box6 h3			{margin-bottom:7px;}
+		.box6 em			{display:block;}
+		.box6 .icon1		{float:right;}
+		
+		
+		
+		
+
+/* LISTS */
+
+	/* 1. Slideshow */
+		#slideshow				{width:624px; height:351px; margin:0; padding:0; overflow:hidden; position:relative;}
+		#slideshow li			{margin:0; padding:0; position:absolute; top:0; left:0; list-style-type:none; z-index:8;}
+		#slideshow .last-active	{z-index:9;}
+		#slideshow .active		{z-index:10;}
+		
+		
+
+		
+
+
+
 
 
 
@@ -350,7 +394,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.icon1		{display:block; height:19px; padding:0 23px 0 0; background-position:right -120px;}
 	/* Red Arrow, left side */
 		.icon2		{display:block; height:19px; padding:0 0 0 23px; background-position:-22px -120px;}
-	
+	/* Dark Red Arrow, right side */
+		.icon3		{display:block; height:19px; padding:0 23px 0 0; background-position:right -360px;}
 
 
 
