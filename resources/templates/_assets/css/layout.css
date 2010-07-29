@@ -282,7 +282,9 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		
 /* BOXES */
 	.box,
-	.box img		{display:block;}
+	.box img			{display:block; position:relative;}
+	.box .hover			{display:none;}
+	.box:hover .hover	{display:block; width:205px; height:100%; position:absolute; top:0; right:0; background:url(../img/content/aside/hover1.png);}
 	
 	/* Box Offset - use to negative margin boxes with shadows inside columns */
 		.boxOffset1		{margin-left:-9px !important;}
