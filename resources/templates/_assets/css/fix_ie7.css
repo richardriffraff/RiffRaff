@@ -9,9 +9,9 @@ DESCRIPTION:  	File Fixes IE7 Bugs
 	.clearfix	{zoom:1;}
 
 	/* @group Generic List Fixes */
-	dl		{float:left;}
-	dt 		{float:left; clear:left;}				
-	dd		{float:none;}
+	dl		{float:left !important;}
+	dt 		{float:left !important; clear:left !important;}				
+	dd		{float:none !important;}
 	
 	ol		{padding-left:0;}
 	ol ol	{padding-left:0;}	
