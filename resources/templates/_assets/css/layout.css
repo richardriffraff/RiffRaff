@@ -91,7 +91,6 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.navMain .active a			{position:relative;}
 		.navMain .active i			{display:block; position:absolute; right:0; top:-4px; width:3px; height:31px; background-position:-317px -9px;}
 		.navMain .navSub			{display:none;}
-		.navMain li:hover .navSub	{display:block;}
 		
 		/* Image Replacement Text */
 			#navHome,
@@ -191,9 +190,10 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 	
 	/* Has JS */
 		/* Header */
-			.hasJs header		{overflow:hidden; height:45px;}
+			.hasJs header						{overflow:hidden; height:45px;}
 	
 		/* Nav Sub */
+			.hasJs
 			.hasJs .navSub	  		{display:none; overflow:hidden;}
 			.hasJs .active .navSub	{display:block;}
 			
