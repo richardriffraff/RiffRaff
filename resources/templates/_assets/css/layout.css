@@ -306,7 +306,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 				#a5Specialities li	{margin:0 0 16px;}
 				
 			/* Actions Box */
-				#a5Actions h2		{margin-top:0; margin-bottom:5px;}
+				#a5Actions h2		{margin-top:0; margin-bottom:5px; clear:both; width:100%;}
 				#a5Actions dl		{margin:-12px 0 0 0; padding:0 0 29px 16px;}
 				#a5Actions dt		{float:left; width:50px; margin:0 0 2px 0;}
 				#a5Actions dd		{margin:0 0 2px 0;}
