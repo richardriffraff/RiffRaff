@@ -60,7 +60,10 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		#navShowcase,
 		#navContact,
 		.navSub a,
-		#getInTouch button		{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
+		#getInTouch button,
+		#adr strong,
+		#hours strong,
+		#getInTouch legend a	{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
 
 
 
@@ -156,28 +159,33 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 					
 					
 			/* Contact Sub Nav */
-				#contactInfo a		{width:auto; height:auto; text-indent:0; background:none;}
+				#contactInfo a			{width:auto; height:auto; text-indent:0; background:none;}
+				#contactInfo strong,
+				#contactInfo legend a	{display:block; height:11px; text-indent:-999px; overflow:hidden;}
 				
 				/* Address */
-					#adr 			{float:left; width:190px; padding:41px 0 34px 29px;}
+					#adr 				{float:left; width:190px; padding:41px 0 34px 29px;}
+					#adr strong			{width:99px; background-position:right -340px; margin-bottom:2px;}
 					
 				/* Contacts (emails + phone no's) */
-					#contacts		{float:left; width:251px; padding:57px 0 34px;}
-					#contacts dt	{float:left; width:60px; clear:left;}
-					#contacts dd	{float:left; width:auto; clear:right;}
+					#contacts			{float:left; width:251px; padding:54px 0 34px;}
+					#contacts dt		{float:left; width:60px; clear:left;}
+					#contacts dd		{float:left; width:auto; clear:right;}
 					
 				/* Hours */
-					#hours			{float:left; width:217px; padding:41px 0 34px;}
-					#hours dt		{float:left; width:80px; clear:left;}
-					#hours dd		{width:auto; clear:right;}		
+					#hours				{float:left; width:217px; padding:41px 0 34px;}
+					#hours strong		{width:77px; background-position:right -355px; margin-bottom:1px;}
+					#hours dt			{float:left; width:80px; clear:left;}
+					#hours dd			{width:auto; clear:right;}		
 					
 				/* Contact Form */
-					#getInTouch		{float:left; width:258px; padding:41px 0 34px;}
-					#getInTouch dl	{padding-top:13px;}
-					#getInTouch dt	{float:left; width:85px; padding-bottom:12px; clear:left;}
-					#getInTouch dd	{float:left; padding-bottom:12px; clear:right;}
-					#getInTouch input[type=text]	{width:161px;}
-					#getInTouch button	{float:right; width:85px; margin: -4px -3px 0 0; background-position:0 -341px;}
+					#getInTouch				{float:left; width:258px; padding:41px 0 34px;}
+					#getInTouch legend a	{width:86px; background-position:right -370px;}
+					#getInTouch dl			{padding-top:15px;}
+					#getInTouch dt			{float:left; width:85px; padding-bottom:12px; clear:left;}
+					#getInTouch dd			{float:left; padding-bottom:12px; clear:right;}
+					#getInTouch button		{float:right; width:85px; margin: -4px -3px 0 0; background-position:0 -341px;}
+					#getInTouch input		{width:161px;}
 
 		
 	
@@ -186,7 +194,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 			.hasJs header		{overflow:hidden; height:45px;}
 	
 		/* Nav Sub */
-			.hasJs .navSub	  {display:block; overflow:hidden;}
+			.hasJs .navSub	  		{display:none; overflow:hidden;}
+			.hasJs .active .navSub	{display:block;}
 			
 			
 			
