@@ -116,10 +116,10 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
 	/* Box 4 - Apply to sma images (see img dimensions below), adds white BG + shadow */
 	/* Box 5 - Red Background, image on left, text on right, large.  (See: showcase_landing.html) */
-		.box5 h2		{font-size:14px; color:#131517;}
+		.box5 h2		{font-size:14px; color:#7a001a;}
 		.box5 h3		{font-size:20px; color:#fff;}	
 		.box5 p			{color:#edb6c2; line-height:18px;}
-		.box5 li		{color:#2a2e33;}
+		.box5 li		{color:#fff;}
 		.box5 a:link	{color:#fff;}
 		
 	/* Box 6 - White, shadows (See: showcase_landing.html) */
@@ -154,6 +154,8 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 		.icon2		{line-height:18px;}	
 	/* Dark Red Arrow, right side */
 		.icon3		{color:#fff; font-size:10px; line-height:18px; font-weight:bold; text-transform:uppercase;}	
+	/* Large Red Arrow, right side */
+		.icon4		{line-height:20px; text-transform:uppercase; font-size:13px; font-weight:bold;}
 	
 	
 /************************************************

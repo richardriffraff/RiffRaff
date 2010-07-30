@@ -46,7 +46,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		article ul li,
 		.icon1,
 		.icon2,
-		.icon3					{background-image: url(../img/sprites/02spr_icons_24bit.png); background-repeat:no-repeat;}
+		.icon3,
+		.icon4					{background-image: url(../img/sprites/02spr_icons_24bit.png); background-repeat:no-repeat;}
 	
 	/* 3. Language */
 		#rss a,
@@ -361,7 +362,7 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.box5 h3			{padding-bottom:3px;}
 		.box5 ul			{padding-left:661px; padding-bottom:15px;}
 		.box5 li			{background-position:0 -240px;}
-		.box5 .icon3		{float:right; margin-right:28px;}
+		.box5 .icon4		{float:right; margin-right:28px;}
 		
 		
 	/* Box 6 - White, shadows (See: showcase_landing.html) */
@@ -414,6 +415,8 @@ DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, backgroun
 		.icon2		{display:block; height:19px; padding:0 0 0 23px; background-position:-22px -120px;}
 	/* Dark Red Arrow, right side */
 		.icon3		{display:block; height:19px; padding:0 23px 0 0; background-position:right -360px;}
+	/* Large Red Arrow, right side */
+		.icon4		{display:block; height:22px; padding:0 26px 0 0; background-position:right -420px;}
 
 
 
