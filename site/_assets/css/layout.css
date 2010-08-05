@@ -1,141 +1,621 @@
 /************************************************
 FILE:		  	layout.css
-DESCRIPTION:  	file defines layout - Dimensions, display, floats, position, background, borders etc
+DESCRIPTION:  	Defines layout - Dimensions, display, floats, position, background, borders etc
 
-	1. = PAGE LAYOUTS
-	2. = GENERIC CONTENT LAYOUT 	(ALL Pages)
-	3. = MULTI PAGE CONTENT LAYOUT	(SOME Pages)
-	4. = SINGLE PAGE CONTENT LAYOUT	(ONE Page)
-			
-************************************************/
+	1. = PAGE LAYOUT TYPOGRAPHY 	(ALL PAGES: header footer etc)
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES: based on wrapper - '#wrapper p')
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE PAGE: based on page wrapper - .pageName .class)			
 
 
-/************************************************
 	1. = PAGE LAYOUTS
 ************************************************/
 
-html			{height:100%;}
-body 			{height:100%; background:#fdfdfc; position:relative;}
+/* BASICS */
+	html				{height:100%;}
+	body 				{height:100%; background: #fdfdfc url(../img/bg/bgBody.png) center 6px; position:relative;}
+
+				
+	/* Quickfix Classes */
+		.clearB			{clear: both;}
+		.clearL			{clear: left;}
+		.clearR			{clear: right;}
+		.floatL			{float: left;}
+		.floatR			{float: right;}
+		.clear			{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
+		.clearfix:after	{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+		.container		{max-width:986px; margin:0 auto;}
+
+
+
+
+
+/* SPRITES */
+
+	/* 1. Interface - 24 Bit */
+		#fShadow,
+		#hShadow,
+		#navSubShadow,
+		.navMain .active,
+		.navMain .active i,
+		article .hr,
+		.box2 .top,
+		.box2 .bottom,
+		button						{background-image: url(../img/sprites/01spr_interface_24bit.png);}
+	
+	/* 2. Icons - 24 Bit */
+		article ul li,
+		.icon1,
+		.icon2,
+		.icon3,
+		.icon4,
+		#options li,
+		#share li a ,
+		#caseStudyPag .prev,
+		#caseStudyPag .next,
+		#caseStudyPag .prev:hover,
+		#caseStudyPag .next:hover,
+		#methodPagination .prev a,
+		#methodPagination .next a		{background-image: url(../img/sprites/02spr_icons_24bit.png); background-repeat:no-repeat;}
+	
+	/* 3. Language */
+		#rss a,
+		#twitter a,
+		#email a,
+		#phone,
+		#navHome,
+		#navServices,
+		#navMethod,
+		#navEthos,
+		#navShowcase,
+		#navCareers,
+		#navContact,
+		.navSub a,
+		#getInTouch button,
+		#adr strong,
+		#hours strong,
+		#getInTouch legend a		{background-image: url(../img/sprites/en_03spr_langauge_24bit.png); background-repeat:no-repeat;}
+		
+	/* .4 Method Nav */
+    	#methodPagination li a   	{background-image: url(../img/sprites/en_04spr_method_nav_24bit.png); background-repeat:no-repeat;}
+
+
+
+
+
+
+
+
 
 
 /* HEADER (positioned at bottom) */
-	header				{display:block; position:absolute; bottom:0; left:0; width:100%; background: #303439; height:136px; overflow:hidden;}
-	#logo				{float:right; padding:10px;}
-	#logo img			{display:block;}
-
+	header		{display:block; position:fixed; bottom:0; left:0; width:100%; height:234px; background: url(../img/bg/bgHeader.png) center 0 repeat-x; z-index:9999;}
+	#hShadow	{width:100%; height:2px; margin:-2px 0 0 0; background-position:0 -3px;}
+	#logo		{float:right; padding:13px 27px 0 0;}
+	#logo img	{display:block;}
 	
 	/* Nav Main */
-		.navMain				{float:left;}
-		.navMain ul				{margin:0; padding:0;}
-		.navMain li				{float:left; padding:0; list-style-type:none;}
-		.navMain a				{display:block; padding:15px 20px;}
-		.navMain .active 		{background-color:#2c3035;}
-		.navMain .active a		{cursor:default;}
-		.navMain nav			{display:none;}
-		.navMain li:hover nav	{display:block;}
+		.navMain					{float:left; height:47px;}
+		.navMain ul					{margin:0; padding:17px 0 0;}
+		.navMain li					{float:left; padding:4px 0 16px; list-style-type:none; }
+		.navMain a					{display:block; padding:0 27px 3px; border-left:1px solid #3c4046; border-right:1px solid #282b2f; }
+		.navMain .first				{border-left:none;}
+		.navMain .last				{border-right:none;}
+		.navMain .active 			{background-position:1px -5px;}
+		.navMain .active a			{position:relative;}
+		.navMain .active i			{display:block; position:absolute; right:0; top:-4px; width:3px; height:31px; background-position:-317px -9px;}
+		.navMain .navSub			{display:none;}
+		
+		/* Image Replacement Text */
+			#navHome,
+			#navServices,
+			#navMethod,
+			#navEthos,
+			#navShowcase,
+			#navCareers,
+			#navContact			{height:9px; text-indent:-9999px; overflow:hidden;}
+			
+			#navHome			{width:40px; background-position:27px -58px;}
+			#navServices		{width:63px; background-position:27px -73px;}
+			#navMethod			{width:57px; background-position:27px -88px;}
+			#navEthos			{width:42px; background-position:27px -103px;}
+			#navShowcase		{width:75px; background-position:27px -118px;}
+			#navCareers			{width:60px; background-position:27px -133px;}
+			#navContact			{width:65px; background-position:27px -148px;}
+			
+			/* Active, Hover, Focus */
+				strong #navHome,
+				#navHome:hover		{background-position:right -58px;}
+				strong #navServices,
+				#navServices:hover	{background-position:right -73px;}
+				strong #navMethod,
+				#navMethod:hover	{background-position:right -88px;}
+				strong #navEthos,
+				#navEthos:hover		{background-position:right -103px;}
+				strong #navShowcase,
+				#navShowcase:hover	{background-position:right -118px;}
+				strong #navCareers,
+				#navCareers:hover	{background-position:right -133px;}
+				strong #navContact,
+				#navContact:hover	{background-position:right -148px;}
 		
 		/* Nav Sub*/
-			.navSub				{position:absolute; left:0; top:44px; width:100%; margin:0; padding:0; background:#2c3035;}
-			.navSub ul			{width:630px; margin:0 auto; position:relative; left:-169px; padding:20px 0 20px;}
-			.navSub li			{width:210px; padding:0 0 14px 0;}
-			.navSub a			{padding:0 0 0 15px;}
+			.navSub				{position:absolute; left:0; top:47px; width:100%; overflow:hidden; margin:0; padding:0; background:#2d3136;}
+			.navSub ul			{width:675px; margin:0 auto; position:relative; left:-134px; padding:20px 0 16px;}
+			.navSub li			{width:210px; margin:0 15px 0 0; padding:0 0 3px 0;}
+			.navSub a			{padding:0; width:213px; height:21px; text-indent:-9999px; overflow:hidden; cursor:pointer !important; border:none;}
+			.navSub strong a	{cursor:default !important;}
+			
+			/* Image Replacement Text */
+				#navAll			{background-position:0 -165px;}
+				#navDesDev		{background-position:0 -190px;}
+				#navLarScal		{background-position:0 -215px;}
+				#navSocCom		{background-position:0 -240px;}
+				#navOnlTv		{background-position:0 -265px;}
+				#navBesCon		{background-position:0 -290px;}
+				#navTaiECo		{background-position:0 -315px;}
+				
+				/* Active, hover, focus */
+					strong #navAll,
+					#navAll:hover		{background-position:right -165px;}
+					strong #navDesDev,
+					#navDesDev:hover	{background-position:right -190px;}
+					strong #navLarScal,
+					#navLarScal:hover	{background-position:right -215px;}
+					strong #navSocCom,
+					#navSocCom:hover	{background-position:right -240px;}
+					strong #navOnlTv,
+					#navOnlTv:hover		{background-position:right -265px;}
+					strong #navBesCon,
+					#navBesCon:hover	{background-position:right -290px;}
+					strong #navTaiECo,
+					#navTaiECo:hover	{background-position:right -315px;}
+					
+					
+			/* Contact Sub Nav */
+				#contactInfo a			{width:auto; height:auto; text-indent:0; background:none;}
+				#contactInfo strong,
+				#contactInfo legend a	{display:block; height:11px; text-indent:-999px; overflow:hidden;}
+				
+				/* Address */
+					#adr 				{float:left; width:190px; padding:41px 0 34px 29px;}
+					#adr strong			{width:99px; background-position:right -340px; margin-bottom:2px;}
+					
+				/* Contacts (emails + phone no's) */
+					#contacts			{float:left; width:251px; padding:54px 0 34px;}
+					#contacts dt		{float:left; width:60px; clear:left;}
+					#contacts dd		{float:left; width:auto; clear:right;}
+					
+				/* Hours */
+					#hours				{float:left; width:217px; padding:41px 0 34px;}
+					#hours strong		{width:77px; background-position:right -355px; margin-bottom:1px;}
+					#hours dt			{float:left; width:80px; clear:left;}
+					#hours dd			{width:auto; clear:right;}		
+					
+				/* Contact Form */
+					#getInTouch				{float:left; width:258px; padding:41px 0 34px;}
+					#getInTouch legend a	{width:86px; background-position:right -370px;}
+					#getInTouch dl			{padding-top:15px;}
+					#getInTouch dt			{float:left; width:85px; padding-bottom:12px; clear:left;}
+					#getInTouch dd			{float:left; padding-bottom:12px; clear:right;}
+					#getInTouch button		{float:right; width:85px; margin: -4px -3px 0 0; background-position:0 -341px;}
+					#getInTouch input		{width:161px;}
 
-
-	/* Section specific heights + visibility (for before JS Kicks in) */
 		
-
-			
-			
+	
 	/* Has JS */
 		/* Header */
-			.hasJs header		{overflow:hidden; height:45px;}
+			.hasJs header						{overflow:hidden; height:45px;}
 	
-		/* Nav Main */
-		
-		
 		/* Nav Sub */
-			.hasJs .navSub	  {display:block; overflow:hidden;}
-			
-	
-
-		
+			.hasJs
+			.hasJs .navSub	  		{display:none; overflow:hidden;}
+			.hasJs .active .navSub	{display:block;}
 			
 			
 			
-			
-
 		
 /* FOOTER (positioned at top) */
-	footer				{display:block; position:absolute; top:0; left:0; width:100%; min-height:30px; background: #303439;}
-
-
-		
-/* Containers */
-	.container			{max-width:960px; margin:0 auto;}
-
-
+	#pageFooter		{display:block; position:absolute; top:0; left:0; width:100%; min-height:22px; background: #303439;}
+	#fShadow		{width:100%; height:2px; position:relative; bottom:-2px;}
+	#pageFooter ul	{margin:0; padding:5px 0 3px;}
+	#pageFooter li	{list-style-type:none;}
 	
+	/* Text */
+		#email a,
+		#phone,
+		#twitter a,
+		#rss a		{height:12px; text-indent:-9999px;}		
+	
+		#email		{float:left; padding:0; border-right:1px solid #292c30;}
+		#email a	{float:left; width:157px; background-position:0 3px;}
+		#phone		{float:left; width:168px; padding:0 0 0 9px; border-left:1px solid #3d4248; background-position:9px -12px;}
+		#rss		{float:right; width:75px; padding:0; border-left:1px solid #3d4248;}
+		#twitter	{float:right; width:74px; padding:0; border-right:1px solid #292c30;}
+		#rss a		{float:right; width:75px; background-position:10px -43px;}
+		#twitter a	{float:right; width:74px; background-position:0 -28px;}	
+		
+		/* Hover */
+			#email a:hover		{background-position:right 3px;}
+			#phone a:hover		{background-position:right -12px;}
+			#twitter a:hover	{background-position:right -28px;}
+			#rss a:hover		{background-position:right -43px;}
+
+
+
 
 /************************************************
-	2. = GENERIC CONTENT LAYOUT		(ALL Pages)
+	2. = MULTI PAGE LAYOUT	(SOME Pages)
 ************************************************/
 
-/* QUICKFIX Classes */
-	.hide		{display: none;}
-	.clearB		{clear: both;}
-	.clearL		{clear: left;}
-	.clearR		{clear: right;}
-	.floatL		{float: left;}
-	.floatR		{float: right;}
-	
-	.clear			{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
-	.clearfix:after	{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+/* COLUMN SYSTEMS */
+	#template		{padding:82px 0 110px; position:relative; right:-1px;}
 
-/* TYPOGRAPHY */
-	h1, h2 , h3, h4, h5, h6	{margin:0; padding:0;}
-	h1 						{margin:0 0 20px 0;}
-	p 						{padding:0 0 16px 0;}
-	p img 					{float:left; margin: 8px; }
-	blockquote 				{margin: 0 8px 8px 8px;}
-		blockquote p 		{padding: 12px 0;}
-		blockquote cite 	{display: block; margin:8px 8px 0 8px;}
+	/* Three Columns */
+		.threeColumns				{margin:0; padding:0;}
+		.threeColumns .clm 			{float:left; width:306px; margin:0; padding:0; list-style-type:none; background-image:none;}
+		.threeColumns .clmMiddle 	{width:306px; margin:0 34px 0 34px;}
+		
+		
+	/* 3 | 1 Columns */
+		.three1Columns .clm1		{float:left; width:714px;}
+		.three1Columns .clm2		{float:right; width:238px;}
+
+
+
+
+
+/* ARTICLES */
+	/* Headings */
+		article h1			{margin:0 0 5px;}
+		article .intro		{margin:0 0 14px 0;}
+		article h2			{margin:-10px 0 2px 0;}
+
+	/* Copy */
+		article p			{padding:0 0 20px 0; text-align:justify;}
+		article .openingShort	{width:650px;}
+		article .hr			{height:14px; margin:0 0 28px; clear:both; background-position:center -41px;}
+		article hr			{display:none;}
+		article ul			{margin:0; padding:2px 0 18px 21px;}
+		article li			{margin:0 0 12px 0; padding:0 0 0 21px; background-position:0 1px;}
+	
+	/* Footer */
+		article footer		{display:block; width:100%; margin:0; clear:both;}
+		
+	/* Specific Types */
+		
+		/* Article 1 (Large Media Box at top, 3 columns, see: article_2.html) */
+			.article1 .intro	{margin:0 0 25px 0; float:left; clear:both; width:100%;}
 			
-/* TABLES */
-	table 		{margin: 20px 0; width: 100%; background:none; border:none; text-align:left; border:1px solid #e4e4e4; border-top:none;}
-	th			{background: none; padding: 8px 10px; background:#e4e4e4;}
-	td			{padding:8px 10px; vertical-align:top; background:#f3f3f3;}	
-	tr.odd td 	{background:#fff; }		
+		/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: _article2.html) */
+			.article2 .intro	{margin-bottom:26px;}
+			.article2 .box3		{float:left; margin-right:27px;}
+			.article2 h2		{margin-top:19px;}
+			.article2 h3		{margin-top:-14px; margin-bottom:19px;}
+			.article2 h4		{margin-bottom:5px;}
+			.article2 .icon1	{float:right; margin-top:-8px; margin-bottom:23px;}
+			
+		/* Article 3 (3 colums, sma media box top of each column, see: _article3.html) */
+			.article3 .intro	{margin-bottom:25px;}
+			.article3 h2		{margin-top:0; margin-bottom:3px;}
+			.article3 ul		{padding-top:5px}
+			.article3 li		{background:none; padding-left:0; margin-bottom:9px;}
+			.article3 .icon2	{position:relative; left:-5px;}
+			
+		/* Article 4 (Red box, then 3 columns, see: showcase_landing.html) */
+			.article4 .intro	{margin-bottom:27px;}
+			.article4 nav h2	{margin-top:0; margin-bottom:18px;}
+			.article4 nav li	{background:none;}
+			
+		/* Article 5 (White Large Box, see: homepage.html) */
+			.article5 .box7 	{margin-top:-8px;}
+			
+			/* Intro Text */
+				#a5Intro 			{padding-left:16px; margin-bottom:7px;}
+				#a5Intro h1			{margin-bottom:9px;}
+				
+			/* Specialities Box */
+				#a5Specialities		{margin-bottom:5px;}
+				#a5Specialities h2	{margin:0 0 19px 0; padding:0;}
+				#a5Specialities ul	{padding-top:0;}
+				#a5Specialities li	{margin:0 0 16px;}
+				
+			/* Actions Box */
+				#a5Actions h2		{margin-top:0; margin-bottom:5px; clear:both; width:100%;}
+				#a5Actions dl		{margin:-12px 0 0 0; padding:0 0 29px 16px;}
+				#a5Actions dt		{float:left; width:50px; margin:0 0 2px 0;}
+				#a5Actions dd		{margin:0 0 2px 0;}
+				#a5Actions .icon1	{float:right; margin-top:-16px;}
+					
+		
+		
+
+
+
+
 	
-/* LISTS */
-	ul, ol 			{padding: 0 0 16px 16px;  }
-	ul ul, ol ol	{padding: 8px 0 8px 16px;}
-	ul li			{padding: 0 8px 0 0; list-style-type:square;}
-	ul li li		{list-style-type:circle;}
-	ol li			{list-style-type: decimal; margin-left:16px;}
-	ol li li		{list-style-type: lower-alpha;}
+/* IMAGE BASED HEADINGS */
+	.imageText1,
+	.imageText2,
+	.imageText3				{display:block; width:100%; overflow:hidden; text-indent:-9999px;}
+
+	/* Page h1 */
+		.imageText1			{height:27px;}
 	
-	dl				{float:left; display:block; margin:8px 0;}
-	dt				{width:80px; float:left; clear:left; margin:4px 0; padding-left:16px;}
-	dd				{width:300px; float:left; clear:right; margin:4px 0;}
-
-/* MISC */
-	hr 	{padding:0; background: none; height:1px; border:none; border-bottom:1px dotted #ccc;}	
-
+	/* Page h2 (Sub Heading) */
+		.imageText2			{height:10px;}
+		
+	/* Aside h2, h3, h4 */
+		.imageText3			{width:100%;}
 	
-	
-	
-/************************************************
-	3. = MULTI PAGE CONTENT LAYOUT	(SOME Pages)
-************************************************/	
-
-
-
-
 
 
 		
+		
+		
+		
+/* BOXES */
+	.box,
+	.box img			{display:block; position:relative;}
+	.box .hover			{display:none;}
+	.box:hover .hover	{display:block; width:205px; height:100%; position:absolute; top:0; right:0; background:url(../img/content/aside/hover1.png);}
+	
+	/* Box Offset - use to negative margin boxes with shadows inside columns */
+		.boxOffset1		{margin-left:-9px !important;}
+		.boxOffset2		{margin-left:-7px !important;}
+		.boxOffset3		{margin-left:-4px !important;}
+		.boxOffset4		{margin-left:-8px !important;}
+		.boxOffset5		{margin-left:-3px !important;}
+		
+		
+	/* Box 1 - Apply to large images (see img dimensions below), adds white BG + shadow */
+		.box1			{padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox1.png) 0 0 no-repeat;}
+		.box1 img		{width:624px; height:351px;}
+		
+
+	/* Box 2 - Green BG + text, used for Asides */
+		.box2			{width:311px; margin:0 0 11px 0;}
+		.box2 .top		{height:29px; background-position:-320px -5px;}
+		.box2 .bottom	{height:41px; background-position:0 -55px;}
+		.box2 .content	{padding:0 24px; background:url(../img/bg/bgBox2Content.png) -3px 0 repeat-y;}
+		
+		/* Content */
+			.box2 h2,
+			.box2 h3	{margin-top:-1px; margin-bottom:12px;}
+			.box2 .last	{padding:0;}
+			
+		
+	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
+		.box3			{padding:11px 17px 22px 17px; margin: 0 0 12px 0; clear:both; background:url(../img/bg/bgBox3.png) 0 0 no-repeat;}
+		.box3 img		{width:422px; height:237px;}
+		
+		
+	/* Box 4 - Apply to sma images (see img dimensions below), adds white BG + shadow */
+		.box4			{padding:13px 15px 15px 13px; margin:0 0 14px 0; background:url(../img/bg/bgBox4.png) 0 0 no-repeat;}
+		.box4 img		{width:286px; height:102px;}
+			
+		
+	/* Box 5 - Red Background, image on left, text on right, large.  (See: showcase_landing.html) */
+		.box5				{width:1000px; height:384px; margin-bottom:23px; background:url(../img/bg/bgBox5.png) 0 0 no-repeat;}
+		.box5 .content		{width:966px;  height:351px; margin:0 7px; padding:10px; overflow:hidden; background:url(../img/bg/bgBox5.png) -7px 0 no-repeat;}
+		.box5 #slideshow	{float:left; margin-right:20px;}
+		.box5 h2			{margin-top:23px !important; margin-bottom:4px; height:13px;}
+		.box5 h3			{padding-bottom:3px;}
+		.box5 ul			{padding-left:661px; padding-bottom:15px;}
+		.box5 li			{background-position:0 -240px;}
+		.box5 .icon4		{float:right; margin-right:28px;}
+		
+		
+	/* Box 6 - White, shadows (See: showcase_landing.html) */
+		.box6				{width:266px; height:260px; padding:26px 28px 0; margin-bottom:32px; background:url(../img/bg/bgBox6.png) 0 0 no-repeat;}
+		.box6 img			{margin:0 auto 10px;}
+		.box6 h3			{margin-bottom:7px;}
+		.box6 em			{display:block;}
+		.box6 .icon1		{float:right;}
+			#selectedCaseStudies	{clear:both; float:left;}
+		
+	/* Box 7 - White, shadows, x large (See: homepage.html) */
+		.box7				{width:728px; height:354px; margin:0 0 28px 0; position:relative; background:url(../img/bg/bgBox7.png) 0 0 no-repeat;}
+		.box7 img			{margin:11px 0 0 17px;}
+		.box7 ul			{position:absolute; left:417px; top:130px; width:255px;padding-top:0; padding-left:0;}
+		.box7 li			{margin-bottom:10px; background-position:0 -480px;}
+		.box7 .icon4		{position:absolute; right:54px; top:279px;}
+		
+		
+	/* Box 8 - Green (See: homepage.html) */
+		.box8 				{padding:27px 30px 30px 35px; margin-bottom:12px; background:url(../img/bg/bgBox8.png) 0 0 no-repeat;}
+		.box8 h2			{margin:0; padding:0;}
+		.box8 .icon1		{float:right; margin-top:-22px;}
+		
+	/* Box 9 - Grey Background, image on left, text on right, large.  (See: case_study.html) */
+		.box9				{width:1000px; height:384px; margin-bottom:23px; background:url(../img/bg/bgBox9.png) 0 0 no-repeat;}
+		.box9 .content		{width:966px;  height:351px; margin:0 7px; padding:10px; overflow:hidden; background:url(../img/bg/bgBox9.png) -7px 0 no-repeat;}
+		.box9 #slideshow	{float:left; margin-right:20px;}
+		.box9 h2			{margin-top:23px !important; margin-bottom:10px; margin-right:15px;}
+		.box9 h2 img		{margin:0 auto;}
+		.box9 ul			{padding-left:661px; padding-bottom:15px;}
+		.box9 li			{background-position:0 -721px;}
+		.box9 .icon4		{float:right; margin-right:28px;}
+		
+		/* Sharing Options */
+			#shareOptions		{background: url(../img/bg/bgShareOptions.png) repeat 0 0; height:31px; width:303px; position:absolute; bottom:39px; right:36px;}
+				#options			{float:left; padding: 0; margin:7px 0 0;}
+				#options li			{background-position:-23px -600px; padding-left:22px; float:left; height:17px; line-height:17px; margin:0 0 0 8px;}
+				#options li:hover	{background-position:-23px -627px;}
+				#share				{float:right; padding:0; margin:6px 3px 0 0;}
+				#share li			{clear:right;float:left; background-image:none; margin:0 3px; padding:0; line-height:18px;}
+				#share li a 		{height:20px; width:20px; text-indent:-9999px; overflow:hidden; display:block;}
+					#share .facebook		{background-position:0 -779px;}
+					#share .facebook:hover	{background-position:-20px -779px;}
+					#share .twitter			{background-position:0 -801px;}
+					#share .twitter:hover	{background-position:-20px -801px;}
+					#share .delicious		{background-position:0 -823px;}
+					#share .delicious:hover	{background-position:-20px -823px;}
+					#share .digg			{background-position:0 -845px;}
+					#share .digg:hover		{background-position:-20px -845px;}	
+		
+		/* Case Study Pagination */
+			#caseStudyPag				{height:45px; width:317px; position:relative; background: url(../img/bg/bgPagCaseStudy.png) no-repeat 0 0; display:block; margin:-36px auto 10px;}
+			#caseStudyPag ul			{padding:6px 0 0; margin:0 auto; width:240px; text-align:center;}
+			#caseStudyPag li			{display:inline; float:left; padding:0;}
+			#caseStudyPag li a			{display:block; color:#ed1847; width:26px; height:18px; padding-top:4px; text-align:center;}
+			#caseStudyPag li a:hover	{background: url(../img/bg/bgPagHover.png) no-repeat 0 0; text-decoration:none;}
+			#caseStudyPag li a.active	{color:#000;}
+			#caseStudyPag .next,
+			#caseStudyPag .prev			{text-indent:-9999px; overflow:hidden; display:block; height:21px; width:17px; position:absolute; top:7px; float:none;}
+			#caseStudyPag .prev			{background-position:0 -938px; left:15px;}
+			#caseStudyPag .prev:hover	{background-position:0 -959px;}
+			#caseStudyPag .next			{background-position:-17px -938px; right:15px;}
+			#caseStudyPag .next:hover	{background-position:-17px -959px;}
+			
+	/* Box 10 - Method Landing page slideshow container (See: method_landing.html) */
+		.box10				{width:1000px; height:444px; margin-bottom:23px; background:url(../img/bg/bgMethodLanding.png) 0 0 no-repeat;}
+		.box10 #slideshow	{width:966px;  height:411px; position:relative; left:17px; top:10px; padding:0;}
+		.box10 h2 img		{margin:0 auto;}
+		.box10 ul			{padding-left:661px; padding-bottom:15px;}
+		.box10 li			{background-image:none; margin:0; padding:0; position:relative; width:966px;  height:411px;}
+		.box10 .icon4		{float:right; margin-right:28px;}
+		.box10 .content		{height:411px; width:966px; margin:0; padding:0; left:17px; top:10px; position:relative;}
+		.box10 .info		{clear:both; width:502px; position:absolute; margin:0; padding:0;}
+			#slide01 .info,
+			#slide05 .info,
+			#slide09 .info		{top:200px; left:45px;}
+			#slide02 .info,
+			#slide06 .info,
+			#slide10 .info		{top:200px; right:45px;}
+			#slide03 .info,
+			#slide07 .info,
+			#slide11 .info		{top:110px; left:45px;}
+			#slide04 .info,
+			#slide08 .info,
+			#slide12 .info		{top:110px; right:45px;}
+			
+		.box10 .info p		{padding:0 7px 7px;}
+		.box10 .info a		{display:block; float:right; margin-right:7px;}
+		
+		.box10 .info h2		{height:27px; width:502px; display:block; text-indent:-9999px; margin:0 0 7px;}
+			.box10 #slide01 h2	{background: url(../img/content/method/titles/consultancyStrategyPlanning.png) no-repeat 0 0;}
+			.box10 #slide02 h2	{background: url(../img/content/method/titles/informationArchitecture.png) no-repeat 0 0;}
+			.box10 #slide03 h2	{background: url(../img/content/method/titles/usabilityInteractionDesign.png) no-repeat 0 0;}
+			.box10 #slide04 h2	{background: url(../img/content/method/titles/brandCreativeDesign.png) no-repeat 0 0;}
+			.box10 #slide05 h2	{background: url(../img/content/method/titles/userInterfaceDev.png) no-repeat 0 0;}
+			.box10 #slide06 h2	{background: url(../img/content/method/titles/techArchitecture.png) no-repeat 0 0;}
+			.box10 #slide07 h2	{background: url(../img/content/method/titles/websiteAppDev.png) no-repeat 0 0;}
+			.box10 #slide08 h2	{background: url(../img/content/method/titles/deploymentHostingSupport.png) no-repeat 0 0;}
+			.box10 #slide09 h2	{background: url(../img/content/method/titles/accessibilityDda.png) no-repeat 0 0;}
+			.box10 #slide10 h2	{background: url(../img/content/method/titles/qualityAssurance.png) no-repeat 0 0;}
+			.box10 #slide11 h2	{background: url(../img/content/method/titles/userTestingFeedback.png) no-repeat 0 0;}
+			.box10 #slide12 h2	{background: url(../img/content/method/titles/analyticsTesting.png) no-repeat 0 0;}
+			
+			#slide01 img	{position:absolute; bottom:50px; right:70px;}
+			#slide02 img	{position:absolute; bottom:65px; left:95px;}
+			#slide03 img	{position:absolute; top:75px; right:50px;}
+			#slide04 img	{position:absolute; top:50px; left:35px;}
+			
+			#slide05 img	{position:absolute; bottom:10px; right:35px;}
+			#slide06 img	{position:absolute; bottom:55px; left:55px;}
+			#slide07 img	{position:absolute; top:65px; right:50px;}
+			#slide08 img	{position:absolute; top:45px; left:40px;}
+			
+			#slide09 img	{position:absolute; bottom:20px; right:90px;}
+			#slide10 img	{position:absolute; bottom:30px; left:95px;}
+			#slide11 img	{position:absolute; top:60px; right:45px;}
+			#slide12 img	{position:absolute; top:70px; left:50px;}
+		
+		
+		/* Box 11 - Method page Pagination/Navigation station, 12 thumbs.  (See: method_landing.html) */
+		#methodPagination				{clear:both; width:1000px; height:150px; margin-bottom:23px; background: url(../img/bg/bgMethodNav.png) 0 0 no-repeat; position:relative;}
+		#methodPagination ul   {float:left; width:876px; height:89px; overflow:hidden; margin-top:26px; margin-left:62px; padding:0;}
+		#methodPagination li   {float:left; margin:0 6px; padding:2px;}
+		#methodPagination li.active    {border:2px solid #bbc9d1; padding:0;}
+		#methodPagination a    {width:130px; height:85px; overflow:hidden; text-indent:-9999px; display:block;}
+		#methodPagination .cell01       {background-position:0 0;}
+		#methodPagination .cell01:hover  {background-position:-130px 0;}
+		#methodPagination .cell02       {background-position:0 -85px;}
+		#methodPagination .cell02:hover  {background-position:-130px -85px;}
+		#methodPagination .cell03       {background-position:0 -170px;}
+		#methodPagination .cell03:hover  {background-position:-130px -170px;}
+		#methodPagination .cell04       {background-position:0 -255px;}
+		#methodPagination .cell04:hover  {background-position:-130px -255px;}
+		#methodPagination .cell05       {background-position:0 -340px;}
+		#methodPagination .cell05:hover  {background-position:-130px -340px;}
+		#methodPagination .cell06       {background-position:0 -425px;}
+		#methodPagination .cell06:hover  {background-position:-130px -425px;}
+		#methodPagination .cell07       {background-position:0 -510px;}
+		#methodPagination .cell07:hover  {background-position:-130px -510px;}
+		#methodPagination .cell08       {background-position:0 -595px;}
+		#methodPagination .cell08:hover  {background-position:-130px -595px;}
+		#methodPagination .cell09       {background-position:0 -680px;}
+		#methodPagination .cell09:hover  {background-position:-130px -680px;}
+		#methodPagination .cell10       {background-position:0 -765px;}
+		#methodPagination .cell10:hover  {background-position:-130px -765px;}
+		#methodPagination .cell11       {background-position:0 -850px;}
+		#methodPagination .cell11:hover  {background-position:-130px -850px;}
+		#methodPagination .cell12       {background-position:0 -935px;}
+		#methodPagination .cell12:hover  {background-position:-130px -935px;}
+		
+		#methodPagination .prev,
+		#methodPagination .next         {float:none; position:absolute; top:56px; right:31px; margin:0; padding:0; width:27px;}
+		#methodPagination .prev         {left:31px;}
+		#methodPagination .prev a       {height:28px; width:28px; background-position:0 -1044px;}
+		#methodPagination .prev a:hover  {border:none; background-position:0 -1081px;}
+		#methodPagination .next a       {height:28px; width:28px; background-position:0 -1117px;}
+		#methodPagination .next a:hover   {border:none; background-position:0 -1154px;}
+		
+		
+
+/* LISTS */
+
+	/* 1. Slideshow */
+		#slideshow				{width:624px; height:351px; margin:0; padding:0; overflow:hidden; position:relative;}
+		#slideshow li			{margin:0; padding:0; position:absolute; top:0; left:0; list-style-type:none; z-index:8;}
+		#slideshow .last-active	{z-index:9;}
+		#slideshow .active		{z-index:10;}
+		
+		
+
+		
+
+
+
+
+
+
+/* SIGN UP BOX - sign up to the newsletter */
+	.boxSignUp			{width:322px; height:87px; position:relative;}
+	.boxSignUp input	{position:absolute; top:38px; left:29px; width:161px;}
+	.boxSignUp button	{position:absolute; top:34px; left:205px; width:81px;  background:url(../img/bg/bgBtnSignUp.png) 0 0;}
+	
+	
+	
+	
+/* FORMS */
+	button				{height:26px; text-indent:-999px; overflow:hidden; border:none; outline:none; background:none; cursor:pointer;}
+	input[type=text]	{padding:0 5px; height:16px; border:1px solid #2a2f33; background:url(../img/bg/bgTextArea.png);}
+	
+	
+	
+
+/* Icon Links */
+	/* Red Arrow, right side */
+		.icon1		{display:block; height:19px; padding:0 23px 0 0; background-position:right -120px;}
+	/* Red Arrow, left side */
+		.icon2		{display:block; height:19px; padding:0 0 0 23px; background-position:-22px -120px;}
+	/* Dark Red Arrow, right side */
+		.icon3		{display:block; height:19px; padding:0 23px 0 0; background-position:right -360px;}
+	/* Large Red Arrow, right side */
+		.icon4		{display:block; height:22px; padding:0 26px 0 0; background-position:right -420px;}
+		
+		
+
+
+		
+/* STAMPS */
+	#badge1			{display:block; margin:-8px 0 40px 16px;}
+
+
+
 /************************************************
-	4. = SINGLE PAGE CONTENT LAYOUT	 (ONE Page)
+	3. = SINGLE PAGE CONTENT LAYOUT	 (ONE Page)
 ************************************************/	
 
 

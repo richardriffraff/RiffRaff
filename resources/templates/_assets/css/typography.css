@@ -171,7 +171,24 @@ body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; co
 			.box8:active		{text-decoration:none;}
 			.box8:hover .icon1,
 			.box8:focus .icon1,
-			.box8:active .icon1	{text-decoration:underline;}	
+			.box8:active .icon1	{text-decoration:underline;}
+			
+	/* Box 9 - Grey Background, image on left, text on right, large.  (See: case_study.html) */
+		.box9 h2		{font-size:14px; color:#7a001a;}
+		.box9 h3		{font-size:20px; color:#fff;}	
+		.box9 p			{color:#646464; line-height:18px;}
+		.box9 li		{color:#434343;}
+		.box9 a:link	{color:#fff;}
+		
+		/* Sharing Options */
+		#options li	a	{color:#2a2e33;}
+		
+		
+	/* Box 10 - Method Landing page slideshow container (See: method_landing.html) */
+		.box10 h2		{color:#ed1847; text-transform:uppercase; font-size:21px;}
+		.box10	p		{color:#3e434a; line-height:21px;}
+		.box10 .info a	{text-transform:uppercase; font-weight:bold;}
+	
 		
 		
 

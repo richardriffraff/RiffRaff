@@ -1,11 +1,10 @@
 /************************************************
 FILE:		  	typography.css
-DESCRIPTION:  	file defines typography - line-height, text-align, font-size, color, font-weight etc
+DESCRIPTION:  	Defines typography - line-height, text-align, font-size, color, font-weight etc
 
-	1. = PAGE LAYOUT TYPOGRAPHY 	(ALL Pages)
-	2. = GENERIC TYPOGRAPHY 		(MOST Pages)
-	3. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES)
-	4. = SINGLE PAGE TYPOGRAPHY		(ONE Page)
+	1. = PAGE LAYOUT TYPOGRAPHY 	(ALL PAGES: header footer etc)
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES: based on wrapper - '#wrapper p')
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE PAGE: based on page wrapper - .pageName .class)
 			
 ************************************************/
 
@@ -13,32 +12,47 @@ DESCRIPTION:  	file defines typography - line-height, text-align, font-size, col
 /************************************************
 	1. = PAGE LAYOUT TYPOGRAPHY		
 ************************************************/
+body		{font: 12px 'Helvetica Neue', Helvetica, sans-serif; text-align:center; color: #636363;}
 
-body	{text-align:center;}
+
 
 /* HEADER */
 
-
-	/* Nav Main */
-		.navMain a,
-		.navMain a:link,
-		.navMain a:visited		{color:#4b5259; font-size:12px; text-transform:uppercase;}
-		.navMain a:hover,
-		.navMain a:focus,
-		.navMain a:active,
-		.navMain .active strong a	{color:#d7d7d7 !important; font-weight:normal !important;}
-		
-		
+	/* Nav Main */			
 		/* Nav Sub*/
-			.navSub					{text-align:left;}
-			.navSub a,
-			.navSub a:link,
-			.navSub a:visited		{color:#929292; font-size:10px; text-transform:uppercase;}
-			.navSub a:hover,
-			.navSub a:focus,
-			.navSub a:active		{color:#d7d7d7;}
+			/* Contact Sub Nav */				
+				/* Address */
+					#adr 					{font-size:12px; line-height:16px; color:#8e9294; font-style:normal;}
+					#adr strong				{color:#f7f7f7; font-size:13px;}
+					
+				/* Contacts */
+					#contacts				{line-height:16px; font-size:12px;}
+					#contacts dt			{color:#c0c7cb;}
+					#contacts dd			{color:#8d9193;}
+					#contacts a:link,
+					#contacts a:visited		{color:#ed1847; text-decoration:none;}
+					#contacts a:hover,
+					#contacts a:focus,
+					#contacts a:active		{text-decoration:underline;}
+					
+				/* Hours */
+					#hours				{line-height:16px; font-size:12px;}
+					#hours strong		{color:#f7f7f7; font-size:13px;}
+					#hours dt			{color:#c1c8cc;}
+					#hours dd			{color:#8d9193;}
+					#hours a:link,
+					#hours a:visited	{color:#ed1847; text-decoration:none;}
+					#hours a:hover,
+					#hours a:focus,
+					#hours a:active		{text-decoration:underline;}
+			
+				/* Contact Form */
+					#getInTouch legend a	{color:#f7f7f7; font-size:13px;}
+					#getInTouch dt			{color:#c1c8cc; font-size:11px;}
+			
 
-/* FOOTER */
+
+/* FOOTER (positioned at top) */
 
 
 
@@ -47,65 +61,160 @@ body	{text-align:center;}
 
 	
 	
+	
 /************************************************
-	2. = GENERIC TYPOGRAPHY			(MOST PAGES)
+	2. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES)
 ************************************************/
 
-/* TYPOGRAPHY ELEMENTS */	
-	h1, h2 , h3, h4, h5, h6		{color:#3d3d3d;}
-	h1 				{font-size: 116%;}
-	h2, h3		 	{font-size: 108%;}
-	h4, h5, h6		{font-size: 100%;}
-	
-	p 				{color:#888;}
-	strong 			{font-weight:bold; color: #191919;}
-	p strong		{color:#5f5f5f;}
-	small			{color:#c0c0c0;}
-	em				{color:#5f5f5f;}
 
-	blockquote p 	{font-style: italic; }
-	blockquote cite {text-align: right; font-weight: bold;}
+/* ARTICLES */
+
+	/* Headings */
+		article h1			{font-size:28px; font-weight:bold; line-height:28px; color:#2a2e33;}
+		article .intro		{color:#949ca0; font-size:13px; line-height:13px;}
+		article h2			{color:#33383c; font-size:12px;}
+		article h3,
+		article h4			{color:#33383c;}
+		
+
+	/* Copy */
+		article p			{color:#636363; font-size:12px; line-height:21px;}
+		article .openingShort	{color:#2a2e33;}
+		article a:link,
+		article a:visited 	{color: #ed1847; text-decoration:none;}
+		article a:hover,
+		article a:focus,
+		article a:active 	{text-decoration:underline;}
+		article li			{color:#33383c; font-size:12px;}
+		
+		/* Specific Types */
+			/* Article 1 (Large Media Box at top, 3 columns, see: _generic_2.html) */
+			/* Article 2 (Med Media Box at top, copy on right, 3 columns below, see: team.html) */
+				.article2 h2		{font-size:20px; line-height:20px;}
+				.article2 h3		{font-size:18px; line-height:18px;}
+				.article2 h4		{font-size:13px; line-height:13px;}
+
+			/* Article 3 (3 colums, sma media box top of each column, see: _article3.html) */				
+			/* Article 4 (Red box, then 3 columns, see: showcase_landing.html) */
+				.article4 nav h2	{font-size:18px; line-height:18px;}
+				
+			/* Article 5 (White Large Box, see: homepage.html) */
+				/* Intro */
+					#a5Intro p			{color:#2a2e33; line-height:24px; font-size:15px;}
+				
+				/* Specialities */
+					#a5Specialities h2	{font-size:18px; line-height:18px;}
+					#a5Specialities ul	{padding-left:12px;}
+					#a5Specialities li	{font-size:14px; background-position:0 2px;}
+					
+				/* Actions */
+					#a5Actions h2		{font-size:16px; line-height:16px;}
+					#a5Actions p		{color:#636363; font-size:12px; line-height:16px;}
+					#a5Actions dl		{font-size:13px;}
+					#a5Actions dt		{color:#636363;}
+					#a5Actions dd		{color:#2a2e33;}
+					#a5Actions .icon1	{text-transform:uppercase; font-weight:bold;}
+				
+
 	
-/* Links */	
-	a,
-	a:link,
-	a:visited 	{color: #009fca; text-decoration:none;}
-	a:hover 	{color: #017ea0;}
-	a:focus		{color: #017ea0;}
-	a:active 	{color: #009fca;}
 	
-	strong a,
-	strong a:link,
-	strong a:visited 	{color: #009fca;}
-	strong a:hover 		{color: #017ea0;}
-	strong a:focus		{color: #017ea0;}
-	strong a:active 	{color: #009fca;}
 	
 
-/* TABLES */
-	table 		{text-align:left; }
-	th			{font-weight:bold; font-size:100%;}
-	
 
-/* LISTS */
-	dt			{color:#000;}
-	dd			{color:#000;}
+/* BOXES */
+	/* Box Offset - use to negative margin boxes with shadows inside columns */
+	/* Box 1 - Apply to large images, adds white BG + shadow */
+		.box2 h2,
+		.box2 h3,
+		.box3 h4		{font-size:16px; line-height:16px; color:#50624c; font-weight:bold;}
+		.box2 p			{color:#698164;}
+		
+	/* Box 2 - Green BG + text, used for Asides */
+		/* Content */
+	/* Box 3 - Apply to med images (see img dimensions below), adds white BG + shadow */	
+	/* Box 4 - Apply to sma images (see img dimensions below), adds white BG + shadow */
+	/* Box 5 - Red Background, image on left, text on right, large.  (See: showcase_landing.html) */
+		.box5 h2		{font-size:14px; color:#7a001a;}
+		.box5 h3		{font-size:20px; color:#fff;}	
+		.box5 p			{color:#edb6c2; line-height:18px;}
+		.box5 li		{color:#fff;}
+		.box5 a:link	{color:#fff;}
+		
+	/* Box 6 - White, shadows (See: showcase_landing.html) */
+		.box6			{text-align:center;}
+		.box6 h3		{color:#ed1941; font-size:13px; text-align:left;}
+		.box6 em		{color:#33383c; font-size:12px; font-weight:normal;}
+		.box6 p			{line-height:18px; text-align:left;}
+		.box6 .icon1	{font-size:10px; text-transform:uppercase; font-weight:bold;}
+		
+		/* Hover */
+			.box6:hover,
+			.box6:focus,
+			.box6:active 		{text-decoration:none;}
+			.box6:hover .icon1,
+			.box6:focus .icon1,
+			.box6:active .icon1	{text-decoration:underline;}
+			
+			
+	/* Box 7 - White, shadows, x large (See: homepage.html) */
+		.box7 li				{color:#fff; font-weight:bold;}
+		.box7 .icon4			{float:right; color:#ed1941;}
+		.box7 a:hover .icon4	{text-decoration:underline;}
+		
+	/* Box 8 - Green (See: homepage.html) */
+		.box8 h2				{color:#50624c; font-size:16px;}
+		.box8 p					{font-size:12px; line-height:18px;}
+		.box8 .icon1			{text-transform:uppercase; font-weight:bold;}
+
+		/* Hover */
+			.box8:hover,
+			.box8:focus,
+			.box8:active		{text-decoration:none;}
+			.box8:hover .icon1,
+			.box8:focus .icon1,
+			.box8:active .icon1	{text-decoration:underline;}
+			
+	/* Box 9 - Grey Background, image on left, text on right, large.  (See: case_study.html) */
+		.box9 h2		{font-size:14px; color:#7a001a;}
+		.box9 h3		{font-size:20px; color:#fff;}	
+		.box9 p			{color:#646464; line-height:18px;}
+		.box9 li		{color:#434343;}
+		.box9 a:link	{color:#fff;}
+		
+		/* Sharing Options */
+		#options li	a	{color:#2a2e33;}
+		
+		
+	/* Box 10 - Method Landing page slideshow container (See: method_landing.html) */
+		.box10 h2		{color:#ed1847; text-transform:uppercase; font-size:21px;}
+		.box10	p		{color:#3e434a; line-height:21px;}
+		.box10 .info a	{text-transform:uppercase; font-weight:bold;}
 	
+		
+		
+
+
+
+
+
+
+/* Forms */
+	input[type=text]		{color:#9c9c9c; line-height:11px; font: 11px 'Helvetica Neue', Helvetica, sans-serif; }
+	input[type=text]:hover,
+	input[type=text]:focus	{color:#2A2F33;}
 	
+/* Icon Links */	
+	/* Red Arrow, right side */
+		.icon1		{line-height:18px;}
+	/* Red Arrow, left side */
+		.icon2		{line-height:18px;}	
+	/* Dark Red Arrow, right side */
+		.icon3		{color:#fff; font-size:10px; line-height:18px; font-weight:bold; text-transform:uppercase;}	
+	/* Large Red Arrow, right side */
+		.icon4		{line-height:20px; text-transform:uppercase; font-size:13px; font-weight:bold;}
 	
 	
 /************************************************
-	3. = MUTLIPAGE TYPOGRAPHY		(SOME PAGES)
-************************************************/
-	
-	
-	
-	
-	
-	
-	
-	
-/************************************************
-	4. = SINGLE PAGE TYPOGRAPHY		(ONE Page)
+	3. = SINGLE PAGE TYPOGRAPHY		(ONE Page)
 ************************************************/
 
